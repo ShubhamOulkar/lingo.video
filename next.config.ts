@@ -5,14 +5,14 @@ const withLingo = lingoCompiler.next({
   sourceRoot: "app",
   lingoDir: "lingo",
   sourceLocale: "en",
-  targetLocales: ["es"],
+  targetLocales: ["hi"],
   rsc: true,
   useDirective: false,
   debug: false,
-  // models: "lingo.dev",
-  models: {
-    "*:*": "google:gemini-2.5-flash",
-  },
+  models: "lingo.dev",
+  // models: {
+  //   "*:*": "google:gemini-2.5-flash",
+  // },
 });
 
 const nextConfig: NextConfig = {
