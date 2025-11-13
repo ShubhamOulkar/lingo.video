@@ -6,7 +6,7 @@
   },
   "buckets": {
     "json": {
-      "include": ["i18n/[locale].json"]
+      "include": ["i18n/[locale].json", "public/emotions.[locale].vtt"]
     }
   },
   "$schema": "https://lingo.dev/schema/i18n.json"

@@ -1,62 +1,27 @@
 {
+  "version": 0.1,
   "files": {
+    "components/Video.tsx": {
+      "scopes": {
+        "2/declaration/body/1/argument": {
+          "type": "element",
+          "hash": "af1254bc47bf0b7afdd74941702b6cc9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:source></element:source><element:track></element:track> Your browser does not support the video tag."
+        }
+      }
+    },
     "page.tsx": {
       "scopes": {
-        "3/declaration/body/0/argument": {
+        "5/declaration/body/2/argument/3/1/openingElement/0/value/expression": {
           "type": "element",
-          "hash": "40d04c6b6ec8b9bed7ac67e0ae7f284a",
+          "hash": "efc5bc110c4ea44fe0da2b217625a58e",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "<element:LocaleSwitcher></element:LocaleSwitcher>;<element:main><element:Image></element:Image><element:div><element:h1>To get started, edit the page.tsx file.</element:h1><element:p>Looking for a starting point or more instructions? Head over to <element:a>Templates</element:a> or the <element:a>Learning</element:a> center.</element:p></element:div><element:div><element:a><element:Image></element:Image> Deploy Now</element:a><element:a>Documentation</element:a></element:div></element:main>"
-        },
-        "3/declaration/body/0/argument/3/1-alt": {
-          "type": "attribute",
-          "hash": "d466a5d83229413a6a5a6733490b8e92",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Next.js logo"
-        },
-        "3/declaration/body/0/argument/3/3/1": {
-          "type": "element",
-          "hash": "3047070d9dc67124a07d70d2d1a3fdf7",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "To get started, edit the page.tsx file."
-        },
-        "3/declaration/body/0/argument/3/3/3": {
-          "type": "element",
-          "hash": "d6601c253c8743bb61d4da324c2baed5",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Looking for a starting point or more instructions? Head over to <element:a>Templates</element:a> or the <element:a>Learning</element:a> center."
-        },
-        "3/declaration/body/0/argument/3/5/1": {
-          "type": "element",
-          "hash": "d211bd89e772085a0fd274cb57089b2d",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "<element:Image></element:Image> Deploy Now"
-        },
-        "3/declaration/body/0/argument/3/5/1/1-alt": {
-          "type": "attribute",
-          "hash": "f9c3b0f527a8caeed7a3a1ac7f4a3ab5",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Vercel logomark"
-        },
-        "3/declaration/body/0/argument/3/5/3": {
-          "type": "element",
-          "hash": "f81ded365e7c65d5cd2924538152f0ca",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Documentation"
+          "content": "Loading video..."
         }
       }
     }
