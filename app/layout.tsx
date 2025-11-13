@@ -14,18 +14,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = (await cookies()).get("lingo-locale")?.value || "en";
-  const dictionary = (await import(`../i18n/${locale}.json`)).default;
-  // fetch meta content from your dictionary
-  const title = dictionary.meta?.title;
-  const description = dictionary.meta?.description;
+// export async function generateMetadata(): Promise<Metadata> {
+//   const locale = (await cookies()).get("lingo-locale")?.value || "en";
+//   const dictionary = (await import(`../i18n/${locale}.json`)).default;
+//   // fetch meta content from your dictionary
+//   const title = dictionary.meta?.title;
+//   const description = dictionary.meta?.description;
 
-  return {
-    title,
-    description,
-  };
-}
+//   return {
+//     title,
+//     description,
+//   };
+// }
 
 export default function RootLayout({
   children,
@@ -34,6 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <title>Lingo video translater</title>
+      <meta
+        name="description"
+        content="This app translate video transcript into user language."
+      />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <LingoProvider loadDictionary={(locale) => loadDictionary(locale)}>
           {children}
