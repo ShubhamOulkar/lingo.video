@@ -25,7 +25,7 @@ export default function Transcript({ videoRef, locale }: Props) {
       const socket = new WebSocket(
         process.env.NODE_ENV === "development"
           ? "ws://localhost:3001"
-          : "wss://lingo-video.vercel.app/api/translate",
+          : "wss://lingo-video.vercel.app/api/ws",
       );
 
       ws.current = socket;
