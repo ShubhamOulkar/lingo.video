@@ -6,10 +6,10 @@
   },
   "buckets": {
     "json": {
-      "include": ["public/meat-og/[locale].json"]
+      "include": ["apps/next-app/public/meta-og/[locale].json"]
     },
     "vtt": {
-      "include": ["public/subtitles/emotions.[locale].vtt"]
+      "include": ["apps/next-app/public/subtitles/emotions.[locale].vtt"]
     }
   },
   "$schema": "https://lingo.dev/schema/i18n.json"
