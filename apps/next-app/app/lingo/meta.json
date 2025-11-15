@@ -62,6 +62,14 @@
           "skip": false,
           "overrides": {},
           "content": "{l.name} (<function:l.code.toUpperCase/>)"
+        },
+        "4/declaration/body/3/argument/1/1/expression/0/body": {
+          "type": "element",
+          "hash": "9fa0344cd55fc839f479bb31b9e8150b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<expression/> (<function:code.toUpperCase/> )"
         }
       }
     },

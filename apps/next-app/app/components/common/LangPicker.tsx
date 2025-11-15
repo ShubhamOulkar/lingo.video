@@ -1,6 +1,7 @@
 "use client";
 
 import { useId } from "react";
+import { languageNames } from "../../../locals";
 import styles from "./LangPicker.module.css";
 
 interface Prop {
@@ -10,16 +11,7 @@ interface Prop {
 
 export default function LangPicker({ currentLocale, callback }: Prop) {
   const id = useId();
-
-  const locales = [
-    { code: "en", name: "English" },
-    { code: "es", name: "Spanish" },
-    { code: "de", name: "German" },
-    { code: "fr", name: "French" },
-    { code: "hi", name: "Hindi" },
-    { code: "ja", name: "Japanese" },
-  ];
-
+  const locales = ["en", "es", "de", "fr", "hi", "ja"];
   const changeLocale = (code: string) => callback(code);
 
   return (
@@ -30,9 +22,10 @@ export default function LangPicker({ currentLocale, callback }: Prop) {
         onChange={(e) => changeLocale(e.target.value)}
         className={styles.lang_select_dropdown}
       >
-        {locales.map((l) => (
-          <option key={`${id}-${l.code}`} value={l.code}>
-            {l.name} ({l.code.toUpperCase()})
+        {locales.map((code) => (
+          <option key={`${id}-${code}`} value={code}>
+            {languageNames[currentLocale]?.[code] || code} ({code.toUpperCase()}
+            )
           </option>
         ))}
       </select>

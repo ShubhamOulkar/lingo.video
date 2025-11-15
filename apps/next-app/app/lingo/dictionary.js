@@ -84,6 +84,17 @@ export default {
           },
           hash: "3ac4a259c278de51f15e8dbda33b98db",
         },
+        "4/declaration/body/3/argument/1/1/expression/0/body": {
+          content: {
+            de: "<expression/> (<function:code.toUpperCase/> )",
+            en: "<expression/> (<function:code.toUpperCase/> )",
+            es: "<expression/> (<function:code.toUpperCase/> )",
+            fr: "<expression/> (<function:code.toUpperCase/> )",
+            hi: "<expression/> (<function:code.toUpperCase/> )",
+            ja: "<expression/> (<function:code.toUpperCase/> )",
+          },
+          hash: "9fa0344cd55fc839f479bb31b9e8150b",
+        },
       },
     },
     "components/transcript/Transcript.tsx": {
