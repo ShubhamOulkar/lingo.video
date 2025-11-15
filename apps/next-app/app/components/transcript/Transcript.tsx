@@ -24,14 +24,14 @@ export default function Transcript({ videoRef, locale }: Props) {
     function connect() {
       const socket = new WebSocket(
         process.env.NODE_ENV === "development"
-          ? "ws://localhost:3001"
-          : "wss://lingo-video.vercel.app/api/ws",
+          ? "ws://localhost:3001/ws"
+          : "wss://lingo-video-ws.onrender.com/ws",
       );
 
       ws.current = socket;
 
       socket.onopen = () => {
-        console.log(`WS connected: ${socket}`);
+        console.log(`WS connected: ${socket.url}`);
         setStatus("ws-connected");
       };
 

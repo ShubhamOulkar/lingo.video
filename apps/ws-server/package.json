@@ -1,0 +1,15 @@
+{
+  "name": "ws-server",
+  "private": true,
+  "type": "module",
+  "main": "ws-server.js",
+  "scripts": {
+    "dev": "node ws-server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.3",
+    "dotenv": "^17.2.3",
+    "lingo.dev": "^0.115.0",
+    "express": "latest"
+  }
+}

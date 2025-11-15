@@ -16,7 +16,10 @@ const withLingo = lingoCompiler.next({
 });
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  env: {
+    GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
+    LINGODOTDEV_API_KEY: process.env.LINGODOTDEV_API_KEY,
+  },
 };
 
 // export default nextConfig;
