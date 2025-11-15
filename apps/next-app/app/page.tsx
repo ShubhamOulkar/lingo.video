@@ -1,25 +1,18 @@
-import styles from "./page.module.css";
-import { list } from "@vercel/blob";
-import VideoPlayer from "./components/video/Video";
-import UiLangPicker from "./components/uiLangPicker/UiLangPicker";
+"use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-export default async function Home() {
-  const { blobs } = await list({
-    prefix: "emotions.mp4",
-    limit: 1,
-  });
-  const { url } = blobs[0];
+export default function RootRedirect() {
+  const router = useRouter();
 
-  return (
-    <div className={styles.page}>
-      <nav className={styles.header}>
-        <span className={styles.logo}>Lingo.video</span>
-        <UiLangPicker />
-      </nav>
-      <main className={styles.main}>
-        <h1>Real time video subtitle translations</h1>
-        <VideoPlayer src={url} />
-      </main>
-    </div>
-  );
+  useEffect(() => {
+    const cookieLang = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("lingo-locale="))
+      ?.split("=")[1];
+
+    router.replace(cookieLang ? `/${cookieLang}` : "/en");
+  }, [router]);
+
+  return null;
 }

@@ -1,0 +1,67 @@
+import styles from "./page.module.css";
+import { list } from "@vercel/blob";
+import type { Metadata } from "next";
+import VideoPlayer from "../components/video/Video";
+import UiLangPicker from "../components/uiLangPicker/UiLangPicker";
+
+interface Props {
+  params: Promise<{ lang: string }>;
+}
+
+export async function generateStaticParams() {
+  const locales = ["en", "es", "hi", "ja", "fr", "de"];
+  return locales.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang: locale } = await params;
+  const dictionary = (await import(`../../public/meta-og/${locale}.json`))
+    .default;
+  // fetch meta content from your dictionary
+  const title = dictionary.meta?.title;
+  const description = dictionary.meta?.description;
+
+  return {
+    title,
+    description,
+    twitter: {
+      title: title,
+      description: description,
+      images: "https://lingo-video.vercel.app/og.png",
+      creator: "dev Shubham oulkar",
+      creatorId: "@shubhuoulkar",
+      site: `https://lingo-video.vercel.app/${locale}`,
+      siteId: "Lingo.video",
+    },
+    openGraph: {
+      type: "website",
+      url: `https://lingo-video.vercel.app/${locale}`,
+      title: title,
+      description: description,
+      siteName: "Lingo.video",
+      images: [{ url: "https://lingo-video.vercel.app/og.png" }],
+    },
+  };
+}
+
+export default async function Home({ params }: Props) {
+  const { lang: locale } = await params;
+  const { blobs } = await list({
+    prefix: "emotions.mp4",
+    limit: 1,
+  });
+  const { url } = blobs[0];
+
+  return (
+    <div className={styles.page}>
+      <nav className={styles.header}>
+        <span className={styles.logo}>Lingo.video</span>
+        <UiLangPicker paramLocale={locale} />
+      </nav>
+      <main className={styles.main}>
+        <h1>Real time video subtitle translations</h1>
+        <VideoPlayer src={url} />
+      </main>
+    </div>
+  );
+}
