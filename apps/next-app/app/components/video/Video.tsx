@@ -19,38 +19,62 @@ export default function VideoPlayer({ src }: Props) {
   const [locale, setLocale] = useState("en");
 
   useEffect(() => {
-    // read locale only on client
     const c = readCookie("lingo-locale");
     if (c) setLocale(c);
   }, []);
 
   return (
-    <div className={style.video_container}>
-      <video
-        width="500"
-        height="300"
-        controls
-        preload="metadata"
-        ref={videoRef}
-        poster="i18n.avif"
-      >
-        <source src={src} type="video/mp4" />
-        <track
-          src="/subtitles/emotions.en.vtt"
-          kind="captions"
-          srcLang="en"
-          label="English"
-          default={locale === "en"}
-        />
-        <track
-          src="/subtitles/emotions.hi.vtt"
-          kind="captions"
-          srcLang="hi"
-          label="Hindi"
-          default={locale === "hi"}
-        />
-      </video>
-      <hr />
+    <div className={style.video_player}>
+      <div className={style.video_container}>
+        <video controls preload="metadata" ref={videoRef} poster="i18n.avif">
+          <source src={src} type="video/mp4" />
+          <track
+            src="/subtitles/emotions.en.vtt"
+            kind="captions"
+            srcLang="en"
+            label="English"
+            default={locale === "en"}
+          />
+          <track
+            src="/subtitles/emotions.hi.vtt"
+            kind="captions"
+            srcLang="hi"
+            label="Hindi"
+            default={locale === "hi"}
+          />
+          <track
+            src="/subtitles/emotions.es.vtt"
+            kind="captions"
+            srcLang="es"
+            label="Spanish"
+            default={locale === "es"}
+          />
+          <track
+            src="/subtitles/emotions.de.vtt"
+            kind="captions"
+            srcLang="de"
+            label="German"
+            default={locale === "de"}
+          />
+          <track
+            src="/subtitles/emotions.fr.vtt"
+            kind="captions"
+            srcLang="fr"
+            label="French"
+            default={locale === "fr"}
+          />
+          <track
+            src="/subtitles/emotions.ja.vtt"
+            kind="captions"
+            srcLang="hi"
+            label="Hindi"
+            default={locale === "Japanese"}
+          />
+        </video>
+        <p className={style.video_note}>
+          *Note: Press play to start the cue changes and trigger translation.
+        </p>
+      </div>
       <Transcript videoRef={videoRef} locale={locale} />
     </div>
   );

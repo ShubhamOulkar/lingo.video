@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import { LingoProvider, loadDictionary } from "lingo.dev/react/rsc";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -24,6 +19,23 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
+    twitter: {
+      title: title,
+      description: description,
+      images: "https://lingo-video.vercel.app/og.png",
+      creator: "dev Shubham oulkar",
+      creatorId: "@shubhuoulkar",
+      site: "https://lingo-video.vercel.app",
+      siteId: "Lingo.video",
+    },
+    openGraph: {
+      type: "website",
+      url: "https://lingo-video.vercel.app",
+      title: title,
+      description: description,
+      siteName: "Lingo.video",
+      images: [{ url: "https://lingo-video.vercel.app/og.png" }],
+    },
   };
 }
 
@@ -34,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable}`}>
         <LingoProvider loadDictionary={(locale) => loadDictionary(locale)}>
           {children}
         </LingoProvider>
