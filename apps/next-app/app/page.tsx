@@ -17,7 +17,7 @@ export default async function Home() {
         <UiLangPicker />
       </nav>
       <main className={styles.main}>
-        <h1>Real time video subtitles translation</h1>
+        <h1>Real time video subtitle translations</h1>
         <VideoPlayer src={url} />
       </main>
     </div>

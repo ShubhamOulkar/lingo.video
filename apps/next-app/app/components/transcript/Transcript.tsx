@@ -3,6 +3,7 @@
 import { useState, useEffect, type RefObject, useRef } from "react";
 import LangPicker from "../common/LangPicker";
 import styles from "./Transcript.module.css";
+import { resolve } from "path";
 
 interface Props {
   videoRef: RefObject<HTMLVideoElement | null>;
@@ -17,10 +18,12 @@ export default function Transcript({ videoRef, locale }: Props) {
   const [text, setText] = useState("");
   const [translatedText, setTranslatedText] = useState("");
   const [status, setStatus] = useState("idle");
-  const [wsLocale, setWsLocale] = useState(locale);
+  const [wsLocale, setWsLocale] = useState("");
 
   const ws = useRef<WebSocket | null>(null);
   const translateDebounce = useRef<any>(null);
+
+  const resolveLocale = wsLocale || locale;
 
   useEffect(() => {
     function connect() {
@@ -88,7 +91,7 @@ export default function Transcript({ videoRef, locale }: Props) {
           JSON.stringify({
             text: cueText,
             sourceLocale: "en",
-            targetLocale: wsLocale,
+            targetLocale: resolveLocale,
           }),
         );
       }, 0);
@@ -126,21 +129,29 @@ export default function Transcript({ videoRef, locale }: Props) {
         </div>
 
         <div className={styles.translatedBox}>
-          <p className={styles.labelTranslated}>
+          <div className={styles.labelTranslated}>
             <span>
-              Translated to (<span>{wsLocale}</span>)
+              Translated to (<span>{resolveLocale}</span>) using Lingo Engine
             </span>
-            <strong className={styles.engineLabel}>Lingo Engine</strong>
-          </p>
+            <LangPicker
+              currentLocale={resolveLocale}
+              callback={(code) => setWsLocale(code)}
+            />
+          </div>
           <p className={styles.textContent}>
             {translatedText || "Awaiting translation..."}
           </p>
         </div>
       </div>
 
-      <p className={styles.statusFooter}>
-        WS Status: <span className={styles.statusOk}>{status}</span>
-      </p>
+      <div className={styles.statusFooter}>
+        <p>
+          *Note: Change language in lingo engine for see real time translation.
+        </p>
+        <p>
+          WS Status: <span className={styles.statusOk}>{status}</span>
+        </p>
+      </div>
     </div>
   );
 }

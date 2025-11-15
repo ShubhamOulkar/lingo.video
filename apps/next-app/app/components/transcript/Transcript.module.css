@@ -65,20 +65,19 @@
   margin-bottom: 0.25rem;
   display: flex;
   justify-content: space-between;
-}
-
-.engineLabel {
-  font-size: 0.75rem;
-  font-family: monospace;
-  color: #1e40af;
-  font-weight: 700;
+  align-items: center;
 }
 
 .statusFooter {
   margin-top: 1rem;
   font-size: 0.75rem;
-  text-align: right;
   color: #9ca3af;
+  display: flex;
+  justify-content: space-between;
+
+  > :nth-child(1) {
+    max-width: 250px;
+  }
 }
 
 .statusOk {
