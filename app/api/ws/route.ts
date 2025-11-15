@@ -2,6 +2,14 @@ interface EdgeWebSocket extends WebSocket {
   accept(): void;
 }
 
+declare global {
+  interface ResponseInit {
+    webSocket?: WebSocket;
+  }
+
+  const WebSocketPair: new () => { 0: WebSocket; 1: EdgeWebSocket };
+}
+
 export const runtime = "edge";
 
 export async function GET(req: Request) {
@@ -20,7 +28,10 @@ export async function GET(req: Request) {
       const res = await fetch("/api/translate", {
         method: "POST",
         body: JSON.stringify({ text, sourceLocale, targetLocale }),
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "x-internal-secret": process.env.INTERNAL_API_SECRET!,
+        },
       });
 
       const data = await res.json();
