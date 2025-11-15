@@ -35,6 +35,8 @@ export default function VideoPlayer({ src }: Props) {
             label="English"
             default={locale === "en"}
           />
+          {/* Following files are not required, AI is doing translation in real time. */}
+          {/* I am keeping these files for checking accuracy of transaltions. Test is by running CC. */}
           <track
             src="/subtitles/emotions.hi.vtt"
             kind="captions"
@@ -72,7 +74,8 @@ export default function VideoPlayer({ src }: Props) {
           />
         </video>
         <p className={style.video_note}>
-          *Note: Press play to start the cue changes and trigger translation.
+          *Note: Press play to start the cue changes and trigger translation. CC
+          is available for checking accuracy.
         </p>
       </div>
       <Transcript videoRef={videoRef} locale={locale} />
