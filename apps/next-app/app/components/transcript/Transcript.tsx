@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect, RefObject, useRef } from "react";
-import style from "./Transcript.module.css";
+import { useState, useEffect, type RefObject, useRef } from "react";
+import LangPicker from "../common/LangPicker";
+import styles from "./Transcript.module.css";
 
 interface Props {
   videoRef: RefObject<HTMLVideoElement | null>;
@@ -16,6 +17,7 @@ export default function Transcript({ videoRef, locale }: Props) {
   const [text, setText] = useState("");
   const [translatedText, setTranslatedText] = useState("");
   const [status, setStatus] = useState("idle");
+  const [wsLocale, setWsLocale] = useState(locale);
 
   const ws = useRef<WebSocket | null>(null);
   const translateDebounce = useRef<any>(null);
@@ -65,43 +67,8 @@ export default function Transcript({ videoRef, locale }: Props) {
     const video = videoRef.current;
     if (!video) return;
 
-    async function loadVTT() {
-      setStatus("loading-vtt");
-
-      if (!video) return;
-
-      const trackEl = Array.from(video.querySelectorAll("track")).find(
-        (t) => (t.getAttribute("srclang") ?? "").toLowerCase() === "en",
-      );
-
-      if (!trackEl) {
-        setText(`No transcript track for ${locale}`);
-        return;
-      }
-
-      const vttSrc = trackEl.getAttribute("src")!;
-      try {
-        const res = await fetch(vttSrc);
-        const raw = await res.text();
-        setText(raw);
-        setStatus("vtt-loaded");
-      } catch (err) {
-        console.error("VTT load error:", err);
-        setStatus("vtt-error");
-      }
-    }
-
-    loadVTT();
-  }, [locale, videoRef]);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
     const tracks = Array.from(video.textTracks);
-    const matching = tracks.find(
-      (t) => t.language.toLowerCase() === locale.toLowerCase(),
-    );
+    const matching = tracks.find((t) => t.language.toLowerCase() === "en");
 
     if (!matching) return;
 
@@ -121,30 +88,59 @@ export default function Transcript({ videoRef, locale }: Props) {
           JSON.stringify({
             text: cueText,
             sourceLocale: "en",
-            targetLocale: locale,
+            targetLocale: wsLocale,
           }),
         );
       }, 0);
     };
-  }, [locale]);
+  }, [locale, wsLocale]);
 
   return (
-    <div className={style.transcript}>
-      <div>
-        <h3>📝 Transcript</h3>
-        <p>
-          <strong>Status:</strong> {status}
-        </p>
+    <div className={styles.transcriptCard}>
+      <h3 className={styles.cardTitle}>
+        <svg
+          className={styles.cardIcon}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+          ></path>
+        </svg>
+        Real-Time Transcript
+      </h3>
 
-        <strong>Original:</strong>
-        <p>{text || "Loading transcript…"}</p>
+      <div className={styles.spaceY}>
+        <div className={styles.originalBox}>
+          <p className={styles.labelOriginal}>
+            Original (<span>en</span>):
+          </p>
+          <p className={styles.textContent}>
+            {text || "Waiting for video playback..."}
+          </p>
+        </div>
+
+        <div className={styles.translatedBox}>
+          <p className={styles.labelTranslated}>
+            <span>
+              Translated to (<span>{wsLocale}</span>)
+            </span>
+            <strong className={styles.engineLabel}>Lingo Engine</strong>
+          </p>
+          <p className={styles.textContent}>
+            {translatedText || "Awaiting translation..."}
+          </p>
+        </div>
       </div>
-      <div>
-        <strong>
-          Translated by <strong>(Lingo engine)</strong>:
-        </strong>
-        <p>{translatedText || "Waiting to start video…"}</p>
-      </div>
+
+      <p className={styles.statusFooter}>
+        WS Status: <span className={styles.statusOk}>{status}</span>
+      </p>
     </div>
   );
 }

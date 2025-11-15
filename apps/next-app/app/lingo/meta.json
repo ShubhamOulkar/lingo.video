@@ -1,8 +1,84 @@
 {
   "files": {
+    "components/common/LangPicker.tsx": {
+      "scopes": {
+        "3/declaration/body/3/argument/1": {
+          "type": "element",
+          "hash": "8e56dcfdea5cb98f73fa30d41bf26bda",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select Target Translation Language:"
+        },
+        "3/declaration/body/3/argument/1/1/expression/0/body": {
+          "type": "element",
+          "hash": "3ac4a259c278de51f15e8dbda33b98db",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{l.name} (<function:l.code.toUpperCase/>)"
+        },
+        "3/declaration/body/3/argument/3/1/expression/0/body": {
+          "type": "element",
+          "hash": "3ac4a259c278de51f15e8dbda33b98db",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{l.name} (<function:l.code.toUpperCase/>)"
+        }
+      }
+    },
     "components/transcript/Transcript.tsx": {
       "scopes": {
-        "4/declaration/body/8/argument/1": {
+        "5/declaration/body/8/argument/1": {
+          "type": "element",
+          "hash": "b51c8af9fc5b45a32be1b0809df2ab3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:svg><element:path></element:path></element:svg> Real-Time Transcript"
+        },
+        "5/declaration/body/8/argument/3/1/1": {
+          "type": "element",
+          "hash": "70b76d83e02186b80f0bd35725f880d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Original (<element:span>en</element:span>):"
+        },
+        "5/declaration/body/8/argument/3/3/1/1": {
+          "type": "element",
+          "hash": "4e0253821af501e16d57bc8e10d44d24",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translated to (<element:span>{wsLocale}</element:span>)"
+        },
+        "5/declaration/body/8/argument/3/3/1/3": {
+          "type": "element",
+          "hash": "320a3cbdf113bf0abda7de3a800a8986",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Lingo Engine"
+        },
+        "5/declaration/body/8/argument/5": {
+          "type": "element",
+          "hash": "5b2e9d681ad729e5513ace11d23e9c0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "WS Status: <element:span>{status}</element:span>"
+        },
+        "5/declaration/body/9/argument/1": {
+          "type": "element",
+          "hash": "b51c8af9fc5b45a32be1b0809df2ab3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:svg><element:path></element:path></element:svg> Real-Time Transcript"
+        },
+        "5/declaration/body/9/argument/1/1": {
           "type": "element",
           "hash": "f521129baedd5785c9a6f73baebde1fe",
           "context": "",
@@ -10,15 +86,7 @@
           "overrides": {},
           "content": "📝 Transcript"
         },
-        "4/declaration/body/8/argument/1/1": {
-          "type": "element",
-          "hash": "f521129baedd5785c9a6f73baebde1fe",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "📝 Transcript"
-        },
-        "4/declaration/body/8/argument/1/3/0": {
+        "5/declaration/body/9/argument/1/3/1": {
           "type": "element",
           "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
           "context": "",
@@ -26,15 +94,7 @@
           "overrides": {},
           "content": "Status:"
         },
-        "4/declaration/body/8/argument/1/3/1": {
-          "type": "element",
-          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Status:"
-        },
-        "4/declaration/body/8/argument/1/5": {
+        "5/declaration/body/9/argument/1/5": {
           "type": "element",
           "hash": "22dca22320d2c36d23f136ea55a8c5d1",
           "context": "",
@@ -42,74 +102,122 @@
           "overrides": {},
           "content": "Original:"
         },
-        "4/declaration/body/8/argument/3/0": {
+        "5/declaration/body/9/argument/3/1/1": {
           "type": "element",
-          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "hash": "70b76d83e02186b80f0bd35725f880d5",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Status:"
+          "content": "Original (<element:span>{locale}</element:span>):"
         },
-        "4/declaration/body/8/argument/3/1": {
+        "5/declaration/body/9/argument/3/3": {
           "type": "element",
-          "hash": "898ae8a7f377ef540c1c1410ec703e92",
+          "hash": "0d09f01a4047b8f83ec10477089f225f",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Translated by <element:strong>(Lingo engine)</element:strong>:"
+          "content": "Translated by Lingo engine:"
         },
-        "4/declaration/body/8/argument/5/1": {
+        "5/declaration/body/9/argument/3/3/1/1": {
           "type": "element",
-          "hash": "81b2492b17eb5dbc1ca430b8b130f1d0",
+          "hash": "4e0253821af501e16d57bc8e10d44d24",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Translated by <element:strong>(Lingo engine)</element:strong>:"
+          "content": "Translated to (<element:span>{wsLocale}</element:span>)"
         },
-        "4/declaration/body/8/argument/9/1": {
+        "5/declaration/body/9/argument/3/3/1/3": {
           "type": "element",
-          "hash": "510e447f6d54d00a243cd2a2a63f1d95",
+          "hash": "320a3cbdf113bf0abda7de3a800a8986",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Translated:"
+          "content": "Lingo Engine"
         },
-        "5/declaration/body/5/argument/1/1": {
+        "5/declaration/body/9/argument/5": {
           "type": "element",
-          "hash": "f521129baedd5785c9a6f73baebde1fe",
+          "hash": "5b2e9d681ad729e5513ace11d23e9c0c",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "📝 Transcript"
-        },
-        "5/declaration/body/5/argument/1/3": {
-          "type": "element",
-          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Status:"
-        },
-        "5/declaration/body/5/argument/1/7/0": {
-          "type": "element",
-          "hash": "f38a21c6d81b7c4c48d368669465b440",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Original language used in video is english:"
-        },
-        "5/declaration/body/5/argument/5/1/0": {
-          "type": "element",
-          "hash": "d927e6cfc2d1cafce573770e825e21e8",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Translating to {locale}:"
+          "content": "WS Status: <element:span>{status}</element:span>"
         }
       }
     },
     "components/video/Video.tsx": {
       "scopes": {
+        "5/declaration/body/3/argument/1/1/11-label": {
+          "type": "attribute",
+          "hash": "b6c77a4e718a978af58895b27731413c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "French"
+        },
+        "5/declaration/body/3/argument/1/1/13-label": {
+          "type": "attribute",
+          "hash": "83ef511fe3291eb3eeb7404470003c4b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Hindi"
+        },
+        "5/declaration/body/3/argument/1/1/3-label": {
+          "type": "attribute",
+          "hash": "e1eeeb379f86a015d6e581fcbc4af7f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "English"
+        },
+        "5/declaration/body/3/argument/1/1/5-label": {
+          "type": "attribute",
+          "hash": "83ef511fe3291eb3eeb7404470003c4b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Hindi"
+        },
+        "5/declaration/body/3/argument/1/1/7-label": {
+          "type": "attribute",
+          "hash": "881640609abd94ca50cbafb21f085042",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Spanish"
+        },
+        "5/declaration/body/3/argument/1/1/9-label": {
+          "type": "attribute",
+          "hash": "1e23c97d063f7235e94e00517f1786c2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "German"
+        },
+        "5/declaration/body/3/argument/1/11-label": {
+          "type": "attribute",
+          "hash": "b6c77a4e718a978af58895b27731413c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "French"
+        },
+        "5/declaration/body/3/argument/1/13-label": {
+          "type": "attribute",
+          "hash": "83ef511fe3291eb3eeb7404470003c4b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Hindi"
+        },
+        "5/declaration/body/3/argument/1/3": {
+          "type": "element",
+          "hash": "b6f6e174a8b374d461804fd9bbdcf432",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "*Note: Press play to start the cue changes and trigger translation."
+        },
         "5/declaration/body/3/argument/1/3-label": {
           "type": "attribute",
           "hash": "e1eeeb379f86a015d6e581fcbc4af7f3",
@@ -125,26 +233,42 @@
           "skip": false,
           "overrides": {},
           "content": "Hindi"
+        },
+        "5/declaration/body/3/argument/1/7-label": {
+          "type": "attribute",
+          "hash": "881640609abd94ca50cbafb21f085042",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Spanish"
+        },
+        "5/declaration/body/3/argument/1/9-label": {
+          "type": "attribute",
+          "hash": "1e23c97d063f7235e94e00517f1786c2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "German"
         }
       }
     },
-    "layout.tsx": {
+    "page.tsx": {
       "scopes": {
-        "7/declaration/body/0/argument/0/1": {
+        "4/declaration/body/2/argument/1/1": {
           "type": "element",
-          "hash": "02cdab7a5f8ac497b77ce7c2e9000c4b",
+          "hash": "6dc03bb918adda9a9696bcda3e89affd",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Lingo video translater"
+          "content": "Lingo.video"
         },
-        "7/declaration/body/0/argument/3-content": {
-          "type": "attribute",
-          "hash": "448734c24e409bad6e6e58baa615fe44",
+        "4/declaration/body/2/argument/3/1": {
+          "type": "element",
+          "hash": "96a642cd4f0c2fcf173edb8dc9a06df9",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "This app translate video transcript into user language."
+          "content": "Real time video subtitles translation"
         }
       }
     }
