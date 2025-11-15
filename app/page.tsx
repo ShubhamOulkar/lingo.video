@@ -1,8 +1,7 @@
-import { Suspense } from "react";
 import { LocaleSwitcher } from "lingo.dev/react/client";
 import styles from "./page.module.css";
 import { list } from "@vercel/blob";
-import VideoPlayer from "./components/Video";
+import VideoPlayer from "./components/video/Video";
 
 export default async function Home() {
   const { blobs } = await list({
@@ -15,9 +14,7 @@ export default async function Home() {
     <div className={styles.page}>
       <LocaleSwitcher locales={["en", "hi"]} />
       <main className={styles.main}>
-        <Suspense fallback={<p>Loading video...</p>}>
-          <VideoPlayer src={url} />
-        </Suspense>
+        <VideoPlayer src={url} />
       </main>
     </div>
   );

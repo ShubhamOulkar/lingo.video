@@ -1,76 +1,135 @@
 {
-  "version": 0.1,
   "files": {
-    "components/Video.tsx": {
+    "components/transcript/Transcript.tsx": {
       "scopes": {
-        "2/declaration/body/1/argument": {
+        "4/declaration/body/8/argument/1": {
           "type": "element",
-          "hash": "dd57455af29c2bd1cd52e9374da8185f",
+          "hash": "f521129baedd5785c9a6f73baebde1fe",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "<element:source></element:source><element:track></element:track><element:track></element:track> Your browser does not support the video tag."
+          "content": "📝 Transcript"
         },
-        "2/declaration/body/1/argument/3-label": {
+        "4/declaration/body/8/argument/1/1": {
+          "type": "element",
+          "hash": "f521129baedd5785c9a6f73baebde1fe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📝 Transcript"
+        },
+        "4/declaration/body/8/argument/1/3/0": {
+          "type": "element",
+          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Status:"
+        },
+        "4/declaration/body/8/argument/1/3/1": {
+          "type": "element",
+          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Status:"
+        },
+        "4/declaration/body/8/argument/1/5": {
+          "type": "element",
+          "hash": "22dca22320d2c36d23f136ea55a8c5d1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Original:"
+        },
+        "4/declaration/body/8/argument/3/0": {
+          "type": "element",
+          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Status:"
+        },
+        "4/declaration/body/8/argument/3/1": {
+          "type": "element",
+          "hash": "898ae8a7f377ef540c1c1410ec703e92",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translated by <element:strong>(Lingo engine)</element:strong>:"
+        },
+        "4/declaration/body/8/argument/5/1": {
+          "type": "element",
+          "hash": "81b2492b17eb5dbc1ca430b8b130f1d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translated by <element:strong>(Lingo engine)</element:strong>:"
+        },
+        "4/declaration/body/8/argument/9/1": {
+          "type": "element",
+          "hash": "510e447f6d54d00a243cd2a2a63f1d95",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translated:"
+        },
+        "5/declaration/body/5/argument/1/1": {
+          "type": "element",
+          "hash": "f521129baedd5785c9a6f73baebde1fe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📝 Transcript"
+        },
+        "5/declaration/body/5/argument/1/3": {
+          "type": "element",
+          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Status:"
+        },
+        "5/declaration/body/5/argument/1/7/0": {
+          "type": "element",
+          "hash": "f38a21c6d81b7c4c48d368669465b440",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Original language used in video is english:"
+        },
+        "5/declaration/body/5/argument/5/1/0": {
+          "type": "element",
+          "hash": "d927e6cfc2d1cafce573770e825e21e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translating to {locale}:"
+        }
+      }
+    },
+    "components/video/Video.tsx": {
+      "scopes": {
+        "5/declaration/body/3/argument/1/3-label": {
           "type": "attribute",
-          "hash": "a2451d4535f4053e4cab050afbb9b72b",
+          "hash": "e1eeeb379f86a015d6e581fcbc4af7f3",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "english"
+          "content": "English"
         },
-        "2/declaration/body/1/argument/5-label": {
+        "5/declaration/body/3/argument/1/5-label": {
           "type": "attribute",
-          "hash": "d3a5911cfe3aae09397e95fa2d726462",
+          "hash": "83ef511fe3291eb3eeb7404470003c4b",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "hindi"
-        },
-        "3/declaration/body/1/argument": {
-          "type": "element",
-          "hash": "1f7f2fc37388bd52bf0771f0d048f614",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "but <element:video><element:source></element:source><element:track></element:track> Your browser does not support the video tag.</element:video>"
-        },
-        "3/declaration/body/1/argument/1": {
-          "type": "element",
-          "hash": "042ecfa0467cd2b8b6337c7da78be4d0",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "<element:source></element:source><element:track></element:track> Your browser does not support the video tag."
-        },
-        "3/declaration/body/2/argument/1": {
-          "type": "element",
-          "hash": "c4bfb5bcc62227f907b300fdc4d71c23",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Set subs"
-        },
-        "3/declaration/body/2/argument/3": {
-          "type": "element",
-          "hash": "042ecfa0467cd2b8b6337c7da78be4d0",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "<element:source></element:source><element:track></element:track> Your browser does not support the video tag."
+          "content": "Hindi"
         }
       }
     },
     "layout.tsx": {
       "scopes": {
-        "7/declaration/body/0/argument/0": {
-          "type": "element",
-          "hash": "1a38a788c185d9ddb4629285831e5dbf",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "tit<element:body><element:LingoProvider>{children}</element:LingoProvider></element:body>"
-        },
         "7/declaration/body/0/argument/0/1": {
           "type": "element",
           "hash": "02cdab7a5f8ac497b77ce7c2e9000c4b",
@@ -81,23 +140,11 @@
         },
         "7/declaration/body/0/argument/3-content": {
           "type": "attribute",
-          "hash": "548d129ac1fca8d4034c4d050e67f579",
+          "hash": "448734c24e409bad6e6e58baa615fe44",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "This app translate video transcript into user prefered language."
-        }
-      }
-    },
-    "page.tsx": {
-      "scopes": {
-        "5/declaration/body/2/argument/3/1/openingElement/0/value/expression": {
-          "type": "element",
-          "hash": "efc5bc110c4ea44fe0da2b217625a58e",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Loading video..."
+          "content": "This app translate video transcript into user language."
         }
       }
     }
