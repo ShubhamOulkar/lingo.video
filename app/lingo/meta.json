@@ -1,62 +1,150 @@
 {
   "files": {
-    "page.tsx": {
+    "components/transcript/Transcript.tsx": {
       "scopes": {
-        "3/declaration/body/0/argument": {
+        "4/declaration/body/8/argument/1": {
           "type": "element",
-          "hash": "40d04c6b6ec8b9bed7ac67e0ae7f284a",
+          "hash": "f521129baedd5785c9a6f73baebde1fe",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "<element:LocaleSwitcher></element:LocaleSwitcher>;<element:main><element:Image></element:Image><element:div><element:h1>To get started, edit the page.tsx file.</element:h1><element:p>Looking for a starting point or more instructions? Head over to <element:a>Templates</element:a> or the <element:a>Learning</element:a> center.</element:p></element:div><element:div><element:a><element:Image></element:Image> Deploy Now</element:a><element:a>Documentation</element:a></element:div></element:main>"
+          "content": "📝 Transcript"
         },
-        "3/declaration/body/0/argument/3/1-alt": {
+        "4/declaration/body/8/argument/1/1": {
+          "type": "element",
+          "hash": "f521129baedd5785c9a6f73baebde1fe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📝 Transcript"
+        },
+        "4/declaration/body/8/argument/1/3/0": {
+          "type": "element",
+          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Status:"
+        },
+        "4/declaration/body/8/argument/1/3/1": {
+          "type": "element",
+          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Status:"
+        },
+        "4/declaration/body/8/argument/1/5": {
+          "type": "element",
+          "hash": "22dca22320d2c36d23f136ea55a8c5d1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Original:"
+        },
+        "4/declaration/body/8/argument/3/0": {
+          "type": "element",
+          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Status:"
+        },
+        "4/declaration/body/8/argument/3/1": {
+          "type": "element",
+          "hash": "898ae8a7f377ef540c1c1410ec703e92",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translated by <element:strong>(Lingo engine)</element:strong>:"
+        },
+        "4/declaration/body/8/argument/5/1": {
+          "type": "element",
+          "hash": "81b2492b17eb5dbc1ca430b8b130f1d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translated by <element:strong>(Lingo engine)</element:strong>:"
+        },
+        "4/declaration/body/8/argument/9/1": {
+          "type": "element",
+          "hash": "510e447f6d54d00a243cd2a2a63f1d95",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translated:"
+        },
+        "5/declaration/body/5/argument/1/1": {
+          "type": "element",
+          "hash": "f521129baedd5785c9a6f73baebde1fe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📝 Transcript"
+        },
+        "5/declaration/body/5/argument/1/3": {
+          "type": "element",
+          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Status:"
+        },
+        "5/declaration/body/5/argument/1/7/0": {
+          "type": "element",
+          "hash": "f38a21c6d81b7c4c48d368669465b440",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Original language used in video is english:"
+        },
+        "5/declaration/body/5/argument/5/1/0": {
+          "type": "element",
+          "hash": "d927e6cfc2d1cafce573770e825e21e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translating to {locale}:"
+        }
+      }
+    },
+    "components/video/Video.tsx": {
+      "scopes": {
+        "5/declaration/body/3/argument/1/3-label": {
           "type": "attribute",
-          "hash": "d466a5d83229413a6a5a6733490b8e92",
+          "hash": "e1eeeb379f86a015d6e581fcbc4af7f3",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Next.js logo"
+          "content": "English"
         },
-        "3/declaration/body/0/argument/3/3/1": {
-          "type": "element",
-          "hash": "3047070d9dc67124a07d70d2d1a3fdf7",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "To get started, edit the page.tsx file."
-        },
-        "3/declaration/body/0/argument/3/3/3": {
-          "type": "element",
-          "hash": "d6601c253c8743bb61d4da324c2baed5",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Looking for a starting point or more instructions? Head over to <element:a>Templates</element:a> or the <element:a>Learning</element:a> center."
-        },
-        "3/declaration/body/0/argument/3/5/1": {
-          "type": "element",
-          "hash": "d211bd89e772085a0fd274cb57089b2d",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "<element:Image></element:Image> Deploy Now"
-        },
-        "3/declaration/body/0/argument/3/5/1/1-alt": {
+        "5/declaration/body/3/argument/1/5-label": {
           "type": "attribute",
-          "hash": "f9c3b0f527a8caeed7a3a1ac7f4a3ab5",
+          "hash": "83ef511fe3291eb3eeb7404470003c4b",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Vercel logomark"
-        },
-        "3/declaration/body/0/argument/3/5/3": {
+          "content": "Hindi"
+        }
+      }
+    },
+    "layout.tsx": {
+      "scopes": {
+        "7/declaration/body/0/argument/0/1": {
           "type": "element",
-          "hash": "f81ded365e7c65d5cd2924538152f0ca",
+          "hash": "02cdab7a5f8ac497b77ce7c2e9000c4b",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Documentation"
+          "content": "Lingo video translater"
+        },
+        "7/declaration/body/0/argument/3-content": {
+          "type": "attribute",
+          "hash": "448734c24e409bad6e6e58baa615fe44",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This app translate video transcript into user language."
         }
       }
     }

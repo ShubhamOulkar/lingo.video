@@ -1,63 +1,134 @@
 export default {
   version: 0.1,
   files: {
-    "page.tsx": {
+    "components/transcript/Transcript.tsx": {
       entries: {
-        "3/declaration/body/0/argument": {
+        "4/declaration/body/8/argument/1": {
           content: {
-            en: "<element:LocaleSwitcher></element:LocaleSwitcher>;<element:main><element:Image></element:Image><element:div><element:h1>To get started, edit the page.tsx file.</element:h1><element:p>Looking for a starting point or more instructions? Head over to <element:a>Templates</element:a> or the <element:a>Learning</element:a> center.</element:p></element:div><element:div><element:a><element:Image></element:Image> Deploy Now</element:a><element:a>Documentation</element:a></element:div></element:main>",
-            es: "<element:LocaleSwitcher></element:LocaleSwitcher>;<element:main><element:Image></element:Image><element:div><element:h1>Para comenzar, edite el archivo page.tsx.</element:h1><element:p>¿Busca un punto de partida o más instrucciones? Diríjase a <element:a>Plantillas</element:a> o al <element:a>Centro de aprendizaje</element:a>.</element:p></element:div><element:div><element:a><element:Image></element:Image> Desplegar ahora</element:a><element:a>Documentación</element:a></element:div></element:main>",
-            hi: "<element:LocaleSwitcher></element:LocaleSwitcher>;<element:main><element:Image></element:Image><element:div><element:h1>आरंभ करने के लिए, page.tsx फ़ाइल संपादित करें।</element:h1><element:p>प्रारंभिक बिंदु या अधिक निर्देश खोज रहे हैं? <element:a>टेम्पलेट्स</element:a> या <element:a>लर्निंग</element:a> केंद्र पर जाएँ।</element:p></element:div><element:div><element:a><element:Image></element:Image> अभी डिप्लॉय करें</element:a><element:a>प्रलेखन</element:a></element:div></element:main>",
+            en: "📝 Transcript",
+            hi: "📝 प्रतिलेख",
           },
-          hash: "40d04c6b6ec8b9bed7ac67e0ae7f284a",
+          hash: "f521129baedd5785c9a6f73baebde1fe",
         },
-        "3/declaration/body/0/argument/3/1-alt": {
+        "4/declaration/body/8/argument/1/1": {
           content: {
-            en: "Next.js logo",
-            es: "Logotipo de Next.js",
-            hi: "Next.js लोगो",
+            en: "📝 Transcript",
+            hi: "📝 प्रतिलेख",
           },
-          hash: "d466a5d83229413a6a5a6733490b8e92",
+          hash: "f521129baedd5785c9a6f73baebde1fe",
         },
-        "3/declaration/body/0/argument/3/3/1": {
+        "4/declaration/body/8/argument/1/3/0": {
           content: {
-            en: "To get started, edit the page.tsx file.",
-            es: "Para comenzar, edite el archivo page.tsx.",
-            hi: "आरंभ करने के लिए, page.tsx फ़ाइल संपादित करें।",
+            en: "Status:",
+            hi: "स्थिति:",
           },
-          hash: "3047070d9dc67124a07d70d2d1a3fdf7",
+          hash: "6eddeb13a4e7ccb25e21ec3f665dbcdf",
         },
-        "3/declaration/body/0/argument/3/3/3": {
+        "4/declaration/body/8/argument/1/3/1": {
           content: {
-            en: "Looking for a starting point or more instructions? Head over to <element:a>Templates</element:a> or the <element:a>Learning</element:a> center.",
-            es: "¿Busca un punto de partida o más instrucciones? Diríjase a <element:a>Plantillas</element:a> o al centro de <element:a>Aprendizaje</element:a>.",
-            hi: "प्रारंभिक बिंदु या अधिक निर्देश खोज रहे हैं? <element:a>टेम्पलेट्स</element:a> या <element:a>लर्निंग</element:a> केंद्र पर जाएँ।",
+            en: "Status:",
+            hi: "स्थिति:",
           },
-          hash: "d6601c253c8743bb61d4da324c2baed5",
+          hash: "6eddeb13a4e7ccb25e21ec3f665dbcdf",
         },
-        "3/declaration/body/0/argument/3/5/1": {
+        "4/declaration/body/8/argument/1/5": {
           content: {
-            en: "<element:Image></element:Image> Deploy Now",
-            es: "<element:Image></element:Image> Desplegar ahora",
-            hi: "<element:Image></element:Image> अभी डिप्लॉय करें",
+            en: "Original:",
+            hi: "मूल:",
           },
-          hash: "d211bd89e772085a0fd274cb57089b2d",
+          hash: "22dca22320d2c36d23f136ea55a8c5d1",
         },
-        "3/declaration/body/0/argument/3/5/1/1-alt": {
+        "4/declaration/body/8/argument/3/0": {
           content: {
-            en: "Vercel logomark",
-            es: "Isologo de Vercel",
-            hi: "Vercel लोगोमार्क",
+            en: "Status:",
+            hi: "स्थिति:",
           },
-          hash: "f9c3b0f527a8caeed7a3a1ac7f4a3ab5",
+          hash: "6eddeb13a4e7ccb25e21ec3f665dbcdf",
         },
-        "3/declaration/body/0/argument/3/5/3": {
+        "4/declaration/body/8/argument/3/1": {
           content: {
-            en: "Documentation",
-            es: "Documentación",
-            hi: "प्रलेखन",
+            en: "Translated by <element:strong>(Lingo engine)</element:strong>:",
+            hi: "द्वारा अनुवादित <element:strong>(लिंगो इंजन)</element:strong>:",
           },
-          hash: "f81ded365e7c65d5cd2924538152f0ca",
+          hash: "898ae8a7f377ef540c1c1410ec703e92",
+        },
+        "4/declaration/body/8/argument/5/1": {
+          content: {
+            en: "Translated by <element:strong>(Lingo engine)</element:strong>:",
+            hi: "द्वारा अनुवादित <element:strong>(लिंगो इंजन)</element:strong>:",
+          },
+          hash: "81b2492b17eb5dbc1ca430b8b130f1d0",
+        },
+        "4/declaration/body/8/argument/9/1": {
+          content: {
+            en: "Translated:",
+            hi: "अनुवादित:",
+          },
+          hash: "510e447f6d54d00a243cd2a2a63f1d95",
+        },
+        "5/declaration/body/5/argument/1/1": {
+          content: {
+            en: "📝 Transcript",
+            hi: "📝 प्रतिलेख",
+          },
+          hash: "f521129baedd5785c9a6f73baebde1fe",
+        },
+        "5/declaration/body/5/argument/1/3": {
+          content: {
+            en: "Status:",
+            hi: "स्थिति:",
+          },
+          hash: "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+        },
+        "5/declaration/body/5/argument/1/7/0": {
+          content: {
+            en: "Original language used in video is english:",
+            hi: "वीडियो में प्रयुक्त मूल भाषा अंग्रेज़ी है:",
+          },
+          hash: "f38a21c6d81b7c4c48d368669465b440",
+        },
+        "5/declaration/body/5/argument/5/1/0": {
+          content: {
+            en: "Translating to {locale}:",
+            hi: "{locale} में अनुवाद किया जा रहा है:",
+          },
+          hash: "d927e6cfc2d1cafce573770e825e21e8",
+        },
+      },
+    },
+    "components/video/Video.tsx": {
+      entries: {
+        "5/declaration/body/3/argument/1/3-label": {
+          content: {
+            en: "English",
+            hi: "अंग्रेज़ी",
+          },
+          hash: "e1eeeb379f86a015d6e581fcbc4af7f3",
+        },
+        "5/declaration/body/3/argument/1/5-label": {
+          content: {
+            en: "Hindi",
+            hi: "हिंदी",
+          },
+          hash: "83ef511fe3291eb3eeb7404470003c4b",
+        },
+      },
+    },
+    "layout.tsx": {
+      entries: {
+        "7/declaration/body/0/argument/0/1": {
+          content: {
+            en: "Lingo video translater",
+            hi: "लिंगो वीडियो अनुवादक",
+          },
+          hash: "02cdab7a5f8ac497b77ce7c2e9000c4b",
+        },
+        "7/declaration/body/0/argument/3-content": {
+          content: {
+            en: "This app translate video transcript into user language.",
+            hi: "यह ऐप वीडियो प्रतिलेख को उपयोगकर्ता की भाषा में अनुवाद करता है।",
+          },
+          hash: "448734c24e409bad6e6e58baa615fe44",
         },
       },
     },

@@ -6,7 +6,10 @@
   },
   "buckets": {
     "json": {
-      "include": ["i18n/[locale].json"]
+      "include": ["public/meat-og/[locale].json"]
+    },
+    "vtt": {
+      "include": ["public/subtitles/emotions.[locale].vtt"]
     }
   },
   "$schema": "https://lingo.dev/schema/i18n.json"

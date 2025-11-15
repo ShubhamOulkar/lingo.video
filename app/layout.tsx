@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await cookies()).get("lingo-locale")?.value || "en";
-  const dictionary = (await import(`../i18n/${locale}.json`)).default;
+  const dictionary = (await import(`../public/meta-og/${locale}.json`)).default;
   // fetch meta content from your dictionary
   const title = dictionary.meta?.title;
   const description = dictionary.meta?.description;

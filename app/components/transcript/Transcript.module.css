@@ -1,0 +1,21 @@
+.transcript {
+  white-space: pre-wrap;
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 45vh;
+  width: 600px;
+  max-width: 600px;
+  overflow: auto;
+  display: flex;
+  gap: 1rem;
+
+  > :nth-child(1) {
+    width: 50%;
+    height: 100%;
+  }
+
+  > :nth-child(2) {
+    width: 50%;
+    height: 100%;
+  }
+}
