@@ -21,7 +21,8 @@ The goal is to save time, reduce costs, and deliver a seamless multilingual expe
 
 ## Table of Contents
 - [Installing](#getting-started)
-- [lingo.video demo](https://lingo-video.vercel.app/)
+- [lingo.video website](https://lingo-video.vercel.app/)
+- [YouTube video](https://www.youtube.com/watch?v=2jzpnqwv9ls)
 - [Real-Time Video Subtitles Translation architecture and tech stack](./docs/live-translation-architecture.md)
 - [Impact & Benefits for Global Companies](#impact--benefits-for-global-companies)
 - [Features](#features)
