@@ -1,23 +1,23 @@
 
 # 🎬 Real-Time Video Subtitles Translation
 
-A system that translates video subtitles in real-time using [`lingo.dev`](https://lingo.dev/) SDK. Designed with a monorepo architecture: frontend on Vercel, WebSocket translaion server on Render.
+System that translates video subtitles in real-time using [`lingo.dev`](https://lingo.dev/) SDK. Designed with a monorepo architecture: frontend on Vercel, WebSocket translation server on Render.
 
 ## Problem Statement
 
-A global food company wants to reach international markets. Their website and video content—including UI text, SEO content, and food-related videos—must support multiple languages.
+A global food company wants to reach international markets. Their website and video content including UI text, SEO content, and food related videos must support multiple languages.
 
-Currently, all video content is in English, and manually translating subtitles for every video is time-consuming and expensive. The company seeks an AI-driven solution that can:
+Currently, all video content is in English, and manually translating subtitles for every video is time consuming and expensive. The company seeks an AI driven solution that can:
 
 - Automatically translate website UI into multiple languages
 
-- Generate and translate video subtitles in real-time
+- Generate and translate video subtitles in real time
 
-- Ensure SEO-friendly multilingual content
+- Ensure SEO friendly multilingual content
 
 The goal is to save time, reduce costs, and deliver a seamless multilingual experience without expanding the translation team.
 
-![lingoi.video screenshot in hindi](desktop.png)
+![lingo.video screenshot in hindi](desktop.png)
 
 ## Table of Contents
 - [Installing](#getting-started)
@@ -55,9 +55,9 @@ This system offers tangible benefits for organizations, especially global food a
 
 - `Minimizes developer workload`: No extra development effort is required to maintain multilingual video content.
 
-- `Faster time-to-market`: Videos can be shipped in days instead of months, accelerating global reach.
+- `Reach markets early`: Videos can be shipped in days instead of months, accelerating global reach.
 
-- `Unlimited language support`: AI-driven translation opens the door to reaching any country in the world.
+- `Unlimited language support`: AI driven translation opens the door to reaching any country in the world.
 
 - `Focus on product, not translation`: Teams can concentrate on improving the core product while the system handles multilingual content automatically.
 
@@ -78,11 +78,11 @@ This system offers tangible benefits for organizations, especially global food a
   > note: Verify og cards for hindi [here](https://opengraph.dev/panel?url=https%3A%2F%2Flingo-video.vercel.app%2Fhi) 
 
 - **Time and Cost Efficiency**  
-  - Reduces developer effort and eliminates third-party translators.  
+  - Reduces developer effort and eliminates third party translators.  
   - Ship multilingual content in **days instead of months**.  
 
 - **Unlimited Language Support**  
-  - AI-driven translation allows reaching any country worldwide.  
+  - AI driven translation allows reaching any country worldwide.  
   - Easily add new languages without manual work.  
 
 - **Focus on Product, Not Translation**  
@@ -94,12 +94,12 @@ This system offers tangible benefits for organizations, especially global food a
 - **Adopt to user prefered system theme** 
   - Website can adopt automatically to user prefered light or dark theme.
 
-## Challenges with Real-Time Translation & How We Solve Them ?
-Real-time translation systems face several technical and operational challenges. This project is designed with production-grade solutions to minimize latency, reduce translation costs, and ensure consistent accuracy across high-volume video content.
+## Challenges with Real Time Translation & How We Solve Them
+Real-time translation systems face several technical and operational challenges. This project is designed with production grade solutions to minimize latency, reduce translation costs, and ensure consistent accuracy across high-volume video content.
 
 ### ⚠️ Core Challenges
 
-1. **Network Latency** : Real-time translation requires fast WebSocket communication. Any network instability can delay subtitle updates.
+1. **Network Latency** : Real time translation requires fast WebSocket communication. Any network instability can delay subtitle updates.
 
 2. **LLM Token Generation Delay** : Translation quality depends on the speed of token generation from the LLM. High load or large subtitles can increase response time. Lingo SDK do not support streaming.
 
@@ -110,9 +110,9 @@ Real-time translation systems face several technical and operational challenges.
 5. **Scaling with High Traffic** : Multiple users watching videos simultaneously can overload translation or socket servers if not optimized.
 
 ## Author
-- LinkedIn - [@shubham](www.linkedin.com/in/shubham-oulkar)
-- Frontend Mentor - [@shubham](https://www.frontendmentor.io/profile/ShubhamOulkar)
-- X - [@shubham](https://x.com/shubhuoulkar)
+- [LinkedIn](www.linkedin.com/in/shubham-oulkar)
+- [Frontend Mentor](https://www.frontendmentor.io/profile/ShubhamOulkar)
+- [X](https://x.com/shubhuoulkar)
 
 ## License
 Content submitted by [shubham oulkar](https://github.com/ShubhamOulkar) is Creative Commons Attribution 4.0 International licensed, as found in the [LICENSE](/LICENSE) file.
