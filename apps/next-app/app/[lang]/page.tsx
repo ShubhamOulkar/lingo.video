@@ -21,14 +21,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // fetch meta content from your dictionary
   const title = dictionary.meta?.title;
   const description = dictionary.meta?.description;
-
+  // TODO: Generate og images by locale. Now use hindi image as default
   return {
     title,
     description,
     twitter: {
       title: title,
       description: description,
-      images: "https://lingo-video.vercel.app/og.png",
+      images: "https://lingo-video.vercel.app/desktop.png",
       creator: "dev Shubham oulkar",
       creatorId: "@shubhuoulkar",
       site: `https://lingo-video.vercel.app/${locale}`,
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: title,
       description: description,
       siteName: "Lingo.video",
-      images: [{ url: "https://lingo-video.vercel.app/og.png" }],
+      images: [{ url: "https://lingo-video.vercel.app/desktop.png" }],
     },
   };
 }

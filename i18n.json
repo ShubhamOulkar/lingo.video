@@ -10,6 +10,9 @@
     },
     "vtt": {
       "include": ["apps/next-app/public/subtitles/emotions.[locale].vtt"]
+    },
+    "markdown": {
+      "include": ["docs/readmes/[locale].md"]
     }
   },
   "$schema": "https://lingo.dev/schema/i18n.json"
