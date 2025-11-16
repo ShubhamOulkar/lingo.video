@@ -1,5 +1,4 @@
 import styles from "./page.module.css";
-import { list } from "@vercel/blob";
 import type { Metadata } from "next";
 import VideoPlayer from "@/components/video/Video";
 import UiLangPicker from "@/components/uiLangPicker/UiLangPicker";
@@ -47,11 +46,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Home({ params }: Props) {
   const { lang: locale } = await params;
-  const { blobs } = await list({
-    prefix: "emotions.mp4",
-    limit: 1,
-  });
-  const { url } = blobs[0];
 
   return (
     <div className={styles.page}>
@@ -61,7 +55,7 @@ export default async function Home({ params }: Props) {
       </nav>
       <main className={styles.main}>
         <h1>Real time video subtitle translations</h1>
-        <VideoPlayer src={url} />
+        <VideoPlayer />
         <ImpactGrid />
       </main>
     </div>

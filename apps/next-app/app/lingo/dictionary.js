@@ -25,6 +25,28 @@ export default {
           },
           hash: "80babc657291e3a9477a5d2d5fcc4dd1",
         },
+        "8/declaration/body/1/argument/1/1": {
+          content: {
+            de: "Lingo.video",
+            en: "Lingo.video",
+            es: "Lingo.video",
+            fr: "Lingo.video",
+            hi: "Lingo.video",
+            ja: "Lingo.video",
+          },
+          hash: "6dc03bb918adda9a9696bcda3e89affd",
+        },
+        "8/declaration/body/1/argument/3/1": {
+          content: {
+            de: "Echtzeit-Video-Untertitelübersetzungen",
+            en: "Real time video subtitle translations",
+            es: "Traducciones de subtítulos de video en tiempo real",
+            fr: "Traductions de sous-titres vidéo en temps réel",
+            hi: "रीयल टाइम वीडियो उपशीर्षक अनुवाद",
+            ja: "リアルタイム動画字幕翻訳",
+          },
+          hash: "80babc657291e3a9477a5d2d5fcc4dd1",
+        },
         "8/declaration/body/2/argument/1/1": {
           content: {
             de: "Lingo.video",
@@ -124,9 +146,9 @@ export default {
             es: "No se requiere esfuerzo de desarrollo adicional para mantener contenido de video multilingüe.",
             fr: "Aucun effort de développement supplémentaire n'est requis pour maintenir le contenu vidéo multilingue.",
             hi: "बहुभाषी वीडियो सामग्री को बनाए रखने के लिए किसी अतिरिक्त विकास प्रयास की आवश्यकता नहीं है।",
-            ja: "多言語ビデオコンテンツを維持するための追加開発作業は不要です。",
+            ja: "多言語の動画コンテンツを維持するために、追加の開発作業は必要ありません。",
           },
-          hash: "3ebe4531de3c291543069390fd99ab77",
+          hash: "c76c2511ee795f2304fe543bfb0cc956",
         },
         "1/declaration/body/0/argument/3/15/3": {
           content: {
@@ -145,10 +167,10 @@ export default {
             en: "Videos can be shipped in days instead of months, accelerating global reach.",
             es: "Los videos se pueden lanzar en días en lugar de meses, acelerando el alcance global.",
             fr: "Les vidéos peuvent être livrées en quelques jours au lieu de mois, accélérant ainsi la portée mondiale.",
-            hi: "वीडियो महीनों के बजाय दिनों में भेजे जा सकते हैं, जिससे वैश्विक पहुँच में तेज़ी आती है।",
-            ja: "ビデオを数ヶ月ではなく数日で提供でき、グローバル展開を加速します。",
+            hi: "वीडियो महीनों के बजाय दिनों में भेजे जा सकते हैं, जिससे वैश्विक पहुंच में तेजी आती है।",
+            ja: "動画を数ヶ月ではなく数日で公開できるため、グローバル展開を加速します。",
           },
-          hash: "6ba4aa3c198fadff3cc3f9f7c2a44dab",
+          hash: "30cfdd28160fb31d9a1563745b198a25",
         },
         "1/declaration/body/0/argument/3/19/3": {
           content: {
@@ -163,14 +185,14 @@ export default {
         },
         "1/declaration/body/0/argument/3/19/5": {
           content: {
-            de: "KI-gesteuerte Übersetzung eröffnet die Möglichkeit, jedes Land der Welt zu erreichen.",
+            de: "KI-gesteuerte Übersetzung ermöglicht es, jedes Land der Welt zu erreichen.",
             en: "AI-driven translation opens the door to reaching any country in the world.",
             es: "La traducción impulsada por IA abre la puerta a llegar a cualquier país del mundo.",
             fr: "La traduction basée sur l'IA ouvre la porte à l'accès à n'importe quel pays du monde.",
-            hi: "AI-संचालित अनुवाद दुनिया के किसी भी देश तक पहुँचने का मार्ग प्रशस्त करता है।",
-            ja: "AIによる翻訳は、世界中のあらゆる国への到達を可能にします。",
+            hi: "एआई-संचालित अनुवाद दुनिया के किसी भी देश तक पहुंचने का मार्ग प्रशस्त करता है।",
+            ja: "AIによる翻訳が、世界中のあらゆる国への展開を可能にします。",
           },
-          hash: "ccebf287c986022660cf0fddfa27db8b",
+          hash: "db2afaa644c0f47967e1a7a38f4cc426",
         },
         "1/declaration/body/0/argument/3/23/3": {
           content: {
@@ -187,12 +209,12 @@ export default {
           content: {
             de: "Teams können sich auf die Verbesserung des Kernprodukts konzentrieren, während das System mehrsprachige Inhalte automatisch verwaltet.",
             en: "Teams can concentrate on improving the core product while the system handles multilingual content automatically.",
-            es: "Los equipos pueden concentrarse en mejorar el producto principal mientras el sistema gestiona el contenido multilingüe automáticamente.",
-            fr: "Les équipes peuvent se concentrer sur l'amélioration du produit principal tandis que le système gère automatiquement le contenu multilingue.",
-            hi: "टीमें मुख्य उत्पाद को बेहतर बनाने पर ध्यान केंद्रित कर सकती हैं जबकि सिस्टम बहुभाषी सामग्री को स्वचालित रूप से संभालता है।",
-            ja: "システムが多言語コンテンツを自動的に処理するため、チームはコア製品の改善に集中できます。",
+            es: "Los equipos pueden concentrarse en mejorar el producto principal mientras el sistema gestiona automáticamente el contenido multilingüe.",
+            fr: "Les équipes peuvent se concentrer sur l'amélioration du produit principal pendant que le système gère automatiquement le contenu multilingue.",
+            hi: "टीमें मुख्य उत्पाद को बेहतर बनाने पर ध्यान केंद्रित कर सकती हैं, जबकि सिस्टम बहुभाषी सामग्री को स्वचालित रूप से संभालता है।",
+            ja: "システムが多言語コンテンツを自動的に処理するので、チームはコア製品の改善に集中できます。",
           },
-          hash: "91e58a3521d393d944b9d777d7cb5d64",
+          hash: "025ccaa34f07d86ce5e6c89ccc22a76a",
         },
         "1/declaration/body/0/argument/3/3/3": {
           content: {
@@ -210,11 +232,11 @@ export default {
             de: "Es ist nicht nötig, .vtt-Untertiteldateien für jede Sprache manuell zu erstellen oder zu speichern.",
             en: "No need to manually create or store .vtt subtitle files for each language.",
             es: "No es necesario crear o almacenar manualmente archivos de subtítulos .vtt para cada idioma.",
-            fr: "Plus besoin de créer ou de stocker manuellement des fichiers de sous-titres .vtt pour chaque langue.",
+            fr: "Pas besoin de créer ou de stocker manuellement des fichiers de sous-titres .vtt pour chaque langue.",
             hi: "प्रत्येक भाषा के लिए मैन्युअल रूप से .vtt उपशीर्षक फ़ाइलें बनाने या संग्रहीत करने की आवश्यकता नहीं है।",
             ja: "各言語の.vtt字幕ファイルを手動で作成したり保存したりする必要はありません。",
           },
-          hash: "dfffb0e7706876556aa04eaf4fb4acc1",
+          hash: "dc381ecf17bf0c3cf6ce3f4460dc82e5",
         },
         "1/declaration/body/0/argument/3/7/3": {
           content: {
@@ -234,9 +256,9 @@ export default {
             es: "Los subtítulos se generan y traducen sobre la marcha, por lo que las empresas no pagan por almacenar múltiples archivos de idioma.",
             fr: "Les sous-titres sont générés et traduits à la volée, de sorte que les entreprises ne paient pas pour le stockage de plusieurs fichiers linguistiques.",
             hi: "उपशीर्षक तुरंत उत्पन्न और अनुवादित होते हैं, इसलिए कंपनियों को कई भाषा फ़ाइलों को संग्रहीत करने के लिए भुगतान नहीं करना पड़ता है।",
-            ja: "字幕はオンザフライで生成および翻訳されるため、企業は複数の言語ファイルを保存するための費用を支払う必要がありません。",
+            ja: "字幕はリアルタイムで生成・翻訳されるため、企業は複数の言語ファイルを保存する費用を支払う必要がありません。",
           },
-          hash: "98f6ac6e0972265d66fa101d494454fe",
+          hash: "fb5644a60eda10ddfa5ff003d62e26cd",
         },
       },
     },
@@ -360,6 +382,83 @@ export default {
     },
     "components/video/Video.tsx": {
       entries: {
+        "4/declaration/body/3/argument/1/1/11-label": {
+          content: {
+            de: "Spanisch",
+            en: "Spanish",
+            es: "Español",
+            fr: "Espagnol",
+            hi: "स्पेनिश",
+            ja: "スペイン語",
+          },
+          hash: "881640609abd94ca50cbafb21f085042",
+        },
+        "4/declaration/body/3/argument/1/1/13-label": {
+          content: {
+            de: "Deutsch",
+            en: "German",
+            es: "Alemán",
+            fr: "Allemand",
+            hi: "जर्मन",
+            ja: "ドイツ語",
+          },
+          hash: "1e23c97d063f7235e94e00517f1786c2",
+        },
+        "4/declaration/body/3/argument/1/1/15-label": {
+          content: {
+            de: "Französisch",
+            en: "French",
+            es: "Francés",
+            fr: "Français",
+            hi: "फ़्रेंच",
+            ja: "フランス語",
+          },
+          hash: "b6c77a4e718a978af58895b27731413c",
+        },
+        "4/declaration/body/3/argument/1/1/17-label": {
+          content: {
+            de: "Hindi",
+            en: "Hindi",
+            es: "Hindi",
+            fr: "Hindi",
+            hi: "हिंदी",
+            ja: "ヒンディー語",
+          },
+          hash: "83ef511fe3291eb3eeb7404470003c4b",
+        },
+        "4/declaration/body/3/argument/1/1/3-label": {
+          content: {
+            de: "Englisch",
+            en: "English",
+            es: "Inglés",
+            fr: "Anglais",
+            hi: "अंग्रेज़ी",
+            ja: "英語",
+          },
+          hash: "e1eeeb379f86a015d6e581fcbc4af7f3",
+        },
+        "4/declaration/body/3/argument/1/1/9-label": {
+          content: {
+            de: "Hindi",
+            en: "Hindi",
+            es: "Hindi",
+            fr: "Hindi",
+            hi: "हिंदी",
+            ja: "ヒンディー語",
+          },
+          hash: "83ef511fe3291eb3eeb7404470003c4b",
+        },
+        "4/declaration/body/3/argument/1/3": {
+          content: {
+            de: "Hinweis: Drücken Sie auf Wiedergabe, um die Cue-Änderungen zu starten und die Übersetzung auszulösen. Untertitel (CC) sind zur Überprüfung der Genauigkeit verfügbar.",
+            en: "*Note: Press play to start the cue changes and trigger translation. CC is available for checking accuracy.",
+            es: "Nota: Pulsa reproducir para iniciar los cambios de señal y activar la traducción. Los subtítulos están disponibles para verificar la precisión.",
+            fr: "*Remarque : Appuyez sur lecture pour démarrer les changements de repères et déclencher la traduction. Les sous-titres sont disponibles pour vérifier la précision.",
+            hi: "*ध्यान दें: क्यू में बदलाव शुरू करने और अनुवाद को सक्रिय करने के लिए प्ले दबाएँ। सटीकता की जाँच के लिए CC उपलब्ध है।",
+            ja: "注記：再生ボタンを押して、キューの変更を開始し、翻訳をトリガーしてください。CCは正確性の確認にご利用いただけます。",
+          },
+          hash: "5117c35f8a1c4a0bdf4fa408a851f89b",
+        },
         "5/declaration/body/3/argument/1/1/11-label": {
           content: {
             de: "Spanisch",
