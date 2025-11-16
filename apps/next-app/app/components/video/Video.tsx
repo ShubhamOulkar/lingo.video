@@ -64,8 +64,8 @@ export default function VideoPlayer() {
           <track
             src="/subtitles/emotions.ja.vtt"
             kind="captions"
-            srcLang="hi"
-            label="Hindi"
+            srcLang="ja"
+            label="Japanese"
             default={locale === "Japanese"}
           />
         </video>
