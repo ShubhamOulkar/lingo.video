@@ -1,42 +1,96 @@
 
-# Real Time Transcript Translator
+# 🎬 Real-Time Video Subtitles Translation
 
-[lingo.video demo](https://lingo-video.vercel.app/)
-[Real time translation architeture](./docs/live-translation-architecture.md)
+A system that translates video subtitles in real-time using [`lingo.dev`](https://lingo.dev/) SDK. Designed with a monorepo architecture: frontend on Vercel, WebSocket translaion server on Render.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Problem Statement
+
+A global food company wants to reach international markets. Their website and video content—including UI text, SEO content, and food-related videos—must support multiple languages.
+
+Currently, all video content is in English, and manually translating subtitles for every video is time-consuming and expensive. The company seeks an AI-driven solution that can:
+
+- Automatically translate website UI into multiple languages
+
+- Generate and translate video subtitles in real-time
+
+- Ensure SEO-friendly multilingual content
+
+The goal is to save time, reduce costs, and deliver a seamless multilingual experience without expanding the translation team.
+
+## Table of Contents
+- [Installing](#getting-started)
+- [lingo.video demo](https://lingo-video.vercel.app/)
+- [Real-Time Video Subtitles Translation architecture and tech stack](./docs/live-translation-architecture.md)
+- [Impact & Benefits for Global Companies](#impact--benefits-for-global-companies)
+- [Features](#features)
+- [Author](#author)
+- [License](#license)
 
 ## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. Clone repository
 ```
+git clone https://github.com/ShubhamOulkar/lingo.video.git
+cd lingo.video
+```
+2. Install dependencies
+```
+pnpm install
+```
+3. Get lingo.dev api key from [`lingo.dev`](https://lingo.dev/)
+4. Create `.env` file and store `LINGODOTDEV_API_KEY`
+5. Run frontend and websocket server concurrently
+```
+pnpm dev
+```
+## Impact & Benefits for Global Companies
+This system offers tangible benefits for organizations, especially global food and delivery companies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `Eliminates VTT file maintenance`: No need to manually create or store .vtt subtitle files for each language.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `Reduces database and storage costs`: Subtitles are generated and translated on the fly, so companies don’t pay for storing multiple language files.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `Minimizes developer workload`: No extra development effort is required to maintain multilingual video content.
 
-## Learn More
+- `Faster time-to-market`: Videos can be shipped in days instead of months, accelerating global reach.
 
-To learn more about Next.js, take a look at the following resources:
+- `Unlimited language support`: AI-driven translation opens the door to reaching any country in the world.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `Focus on product, not translation`: Teams can concentrate on improving the core product while the system handles multilingual content automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- **Real-Time Subtitle Translation**  
+  - Translates video subtitles on the fly using [`lingo.dev`](https://lingo.dev/) SDK and a WebSocket server.  
+  - No need to maintain `.vtt` files for multiple languages.
+  > Note: This repository includes [.vtt files](./apps/next-app/public/subtitles/emotions.hi.vtt) for manual accuracy testing. You can test it by clicking on `CC` and comparing with live translation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **UI Translation in React**  
+  - React UI automatically updates using Lingo Compiler ⚡🤖.  
+  - Dynamic language compilation without hardcoding translations.  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **SEO-Friendly Multilingual Content**  
+  - Automatically generates meta tags and Open Graph (OG) tags using Lingo CLI.  
+  - Fully automatable via CI/CD pipelines.
+  > note: Verify og cards for hindi [here](https://opengraph.dev/panel?url=https%3A%2F%2Flingo-video.vercel.app%2Fhi) 
+
+- **Time and Cost Efficiency**  
+  - Reduces developer effort and eliminates third-party translators.  
+  - Ship multilingual content in **days instead of months**.  
+
+- **Unlimited Language Support**  
+  - AI-driven translation allows reaching any country worldwide.  
+  - Easily add new languages without manual work.  
+
+- **Focus on Product, Not Translation**  
+  - Teams can concentrate on improving the core product while translations happen automatically.  
+
+- **Scales with Video Volume**  
+  - Can handle large numbers of videos without extra infrastructure or maintenance.
+
+## Author
+- LinkedIn - [@shubham](www.linkedin.com/in/shubham-oulkar)
+- Frontend Mentor - [@shubham](https://www.frontendmentor.io/profile/ShubhamOulkar)
+- X - [@shubham](https://x.com/shubhuoulkar)
+
+## License
+Content submitted by [shubham oulkar](https://github.com/ShubhamOulkar) is Creative Commons Attribution 4.0 International licensed, as found in the [LICENSE](/LICENSE) file.
