@@ -3,7 +3,7 @@
   --foreground: #171717;
 
   --text-primary: #ededed;
-  --text-secondary: #999;
+  --text-secondary: #524f4f;
 
   --button-primary-hover: #ccc;
   --button-secondary-hover: #1a1a1a;
@@ -16,6 +16,7 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --card-background: rgb(53, 52, 52);
+    --text-secondary: #999;
   }
 
   html {

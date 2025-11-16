@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import VideoPlayer from "@/components/video/Video";
 import UiLangPicker from "@/components/uiLangPicker/UiLangPicker";
 import ImpactGrid from "@/components/cards/ImpactGrid";
+import Footer from "@/components/footer/Footer";
 
 interface Props {
   params: Promise<{ lang: string }>;
@@ -58,6 +59,7 @@ export default async function Home({ params }: Props) {
         <VideoPlayer />
         <ImpactGrid />
       </main>
+      <Footer />
     </div>
   );
 }
