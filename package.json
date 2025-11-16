@@ -1,7 +1,7 @@
 {
   "name": "lingo.video",
   "version": "0.0.0",
-  "description": "Real time transcript translation",
+  "description": "Real time video subtitles translation",
   "private": "true",
   "scripts": {
     "dev": "turbo dev",
@@ -15,7 +15,7 @@
     "video translation"
   ],
   "author": "oulkarshubhu@gmail.com",
-  "license": "MIT",
+  "license": "CC-BY-4.0",
   "packageManager": "pnpm@10.20.0",
   "workspaces": [
     "apps/*",

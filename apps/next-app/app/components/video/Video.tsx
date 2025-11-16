@@ -4,17 +4,13 @@ import { useRef, useEffect, useState } from "react";
 import Transcript from "../transcript/Transcript";
 import style from "./Video.module.css";
 
-interface Props {
-  src: string;
-}
-
 const readCookie = (name: string) => {
   if (typeof document === "undefined") return null;
   const match = document.cookie.match(new RegExp("(^|; )" + name + "=([^;]+)"));
   return match ? decodeURIComponent(match[2]) : null;
 };
 
-export default function VideoPlayer({ src }: Props) {
+export default function VideoPlayer() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [locale, setLocale] = useState("en");
 
@@ -26,8 +22,8 @@ export default function VideoPlayer({ src }: Props) {
   return (
     <div className={style.video_player}>
       <div className={style.video_container}>
-        <video controls preload="metadata" ref={videoRef} poster="i18n.avif">
-          <source src={src} type="video/mp4" />
+        <video controls preload="metadata" ref={videoRef} poster="og.png">
+          <source src="emotions.mp4" type="video/mp4" />
           <track
             src="/subtitles/emotions.en.vtt"
             kind="captions"

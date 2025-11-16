@@ -1,8 +1,9 @@
 import styles from "./page.module.css";
-import { list } from "@vercel/blob";
 import type { Metadata } from "next";
-import VideoPlayer from "../components/video/Video";
-import UiLangPicker from "../components/uiLangPicker/UiLangPicker";
+import VideoPlayer from "@/components/video/Video";
+import UiLangPicker from "@/components/uiLangPicker/UiLangPicker";
+import ImpactGrid from "@/components/cards/ImpactGrid";
+import Footer from "@/components/footer/Footer";
 
 interface Props {
   params: Promise<{ lang: string }>;
@@ -20,14 +21,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // fetch meta content from your dictionary
   const title = dictionary.meta?.title;
   const description = dictionary.meta?.description;
-
+  // TODO: Generate og images by locale. Now use hindi image as default
   return {
     title,
     description,
     twitter: {
       title: title,
       description: description,
-      images: "https://lingo-video.vercel.app/og.png",
+      images: "https://lingo-video.vercel.app/desktop.png",
       creator: "dev Shubham oulkar",
       creatorId: "@shubhuoulkar",
       site: `https://lingo-video.vercel.app/${locale}`,
@@ -39,18 +40,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: title,
       description: description,
       siteName: "Lingo.video",
-      images: [{ url: "https://lingo-video.vercel.app/og.png" }],
+      images: [{ url: "https://lingo-video.vercel.app/desktop.png" }],
     },
   };
 }
 
 export default async function Home({ params }: Props) {
   const { lang: locale } = await params;
-  const { blobs } = await list({
-    prefix: "emotions.mp4",
-    limit: 1,
-  });
-  const { url } = blobs[0];
 
   return (
     <div className={styles.page}>
@@ -60,8 +56,10 @@ export default async function Home({ params }: Props) {
       </nav>
       <main className={styles.main}>
         <h1>Real time video subtitle translations</h1>
-        <VideoPlayer src={url} />
+        <VideoPlayer />
+        <ImpactGrid />
       </main>
+      <Footer />
     </div>
   );
 }
