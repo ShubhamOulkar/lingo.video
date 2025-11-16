@@ -50,6 +50,130 @@
           "skip": false,
           "overrides": {},
           "content": "Real time video subtitle translations"
+        },
+        "9/declaration/body/3/argument/1/1": {
+          "type": "element",
+          "hash": "6dc03bb918adda9a9696bcda3e89affd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Lingo.video"
+        },
+        "9/declaration/body/3/argument/3/1": {
+          "type": "element",
+          "hash": "80babc657291e3a9477a5d2d5fcc4dd1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Real time video subtitle translations"
+        }
+      }
+    },
+    "components/cards/ImpactGrid.tsx": {
+      "scopes": {
+        "1/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "a4be51d7f65f54f0d0fb87c97e6cccff",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Impact & Benefits for Global Companies"
+        },
+        "1/declaration/body/0/argument/3/11/3": {
+          "type": "element",
+          "hash": "a7c0cde82544ec4b1f3fe72360ab8362",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Minimizes developer workload"
+        },
+        "1/declaration/body/0/argument/3/11/5": {
+          "type": "element",
+          "hash": "3ebe4531de3c291543069390fd99ab77",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No extra development effort is required to maintain multilingual video content."
+        },
+        "1/declaration/body/0/argument/3/15/3": {
+          "type": "element",
+          "hash": "7539b6bc3687fc89939f2a2ef569c711",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Faster time-to-market"
+        },
+        "1/declaration/body/0/argument/3/15/5": {
+          "type": "element",
+          "hash": "6ba4aa3c198fadff3cc3f9f7c2a44dab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Videos can be shipped in days instead of months, accelerating global reach."
+        },
+        "1/declaration/body/0/argument/3/19/3": {
+          "type": "element",
+          "hash": "d3c4620a7b01b2ec1e4d2ce20ffe6c92",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unlimited language support"
+        },
+        "1/declaration/body/0/argument/3/19/5": {
+          "type": "element",
+          "hash": "ccebf287c986022660cf0fddfa27db8b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI-driven translation opens the door to reaching any country in the world."
+        },
+        "1/declaration/body/0/argument/3/23/3": {
+          "type": "element",
+          "hash": "d02b5f5f3fe36e8a72035a4741c6164f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Focus on product, not translation"
+        },
+        "1/declaration/body/0/argument/3/23/5": {
+          "type": "element",
+          "hash": "91e58a3521d393d944b9d777d7cb5d64",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Teams can concentrate on improving the core product while the system handles multilingual content automatically."
+        },
+        "1/declaration/body/0/argument/3/3/3": {
+          "type": "element",
+          "hash": "98351c0f28a4b47160769b481156c115",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Eliminates VTT file maintenance"
+        },
+        "1/declaration/body/0/argument/3/3/5": {
+          "type": "element",
+          "hash": "dfffb0e7706876556aa04eaf4fb4acc1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No need to manually create or store .vtt subtitle files for each language."
+        },
+        "1/declaration/body/0/argument/3/7/3": {
+          "type": "element",
+          "hash": "122e543c2ef5b8f7fc7e51aae2c1bfa2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reduces database and storage costs"
+        },
+        "1/declaration/body/0/argument/3/7/5": {
+          "type": "element",
+          "hash": "98f6ac6e0972265d66fa101d494454fe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Subtitles are generated and translated on the fly, so companies don’t pay for storing multiple language files."
         }
       }
     },

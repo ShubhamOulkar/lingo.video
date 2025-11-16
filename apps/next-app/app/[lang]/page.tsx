@@ -1,8 +1,9 @@
 import styles from "./page.module.css";
 import { list } from "@vercel/blob";
 import type { Metadata } from "next";
-import VideoPlayer from "../components/video/Video";
-import UiLangPicker from "../components/uiLangPicker/UiLangPicker";
+import VideoPlayer from "@/components/video/Video";
+import UiLangPicker from "@/components/uiLangPicker/UiLangPicker";
+import ImpactGrid from "@/components/cards/ImpactGrid";
 
 interface Props {
   params: Promise<{ lang: string }>;
@@ -61,6 +62,7 @@ export default async function Home({ params }: Props) {
       <main className={styles.main}>
         <h1>Real time video subtitle translations</h1>
         <VideoPlayer src={url} />
+        <ImpactGrid />
       </main>
     </div>
   );
