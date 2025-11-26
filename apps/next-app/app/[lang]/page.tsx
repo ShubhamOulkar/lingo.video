@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: title,
       description: description,
       siteName: "Lingo.video",
-      images: [{ url: "https://lingo-video.vercel.app/desktop.png" }],
+      images: [{ url: "https://lingo-video.vercel.app/og.png" }],
     },
   };
 }
