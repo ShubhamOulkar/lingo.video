@@ -19,7 +19,7 @@ importers:
     dependencies:
       lingo.dev:
         specifier: ^0.115.0
-        version: 0.115.0(@types/node@24.10.1)(@types/react@19.2.5)(encoding@0.1.13)(next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
+        version: 0.115.0(@types/node@24.10.1)(@types/react@19.2.5)(encoding@0.1.13)(next@16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
       next:
         specifier: 16.0.3
         version: 16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -56,7 +56,10 @@ importers:
         version: 5.1.0
       lingo.dev:
         specifier: ^0.115.0
-        version: 0.115.0(@types/node@24.10.1)(@types/react@19.2.5)(encoding@0.1.13)(next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
+        version: 0.115.0(@types/node@24.10.1)(@types/react@19.2.5)(encoding@0.1.13)(next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@18.3.1))(react@18.3.1))
+      redis:
+        specifier: ^5.10.0
+        version: 5.10.0
       ws:
         specifier: ^8.18.3
         version: 8.18.3
@@ -1328,6 +1331,34 @@ packages:
     peerDependencies:
       prettier: '*'
 
+  '@redis/bloom@5.10.0':
+    resolution: {integrity: sha512-doIF37ob+l47n0rkpRNgU8n4iacBlKM9xLiP1LtTZTvz8TloJB8qx/MgvhMhKdYG+CvCY2aPBnN2706izFn/4A==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@redis/client': ^5.10.0
+
+  '@redis/client@5.10.0':
+    resolution: {integrity: sha512-JXmM4XCoso6C75Mr3lhKA3eNxSzkYi3nCzxDIKY+YOszYsJjuKbFgVtguVPbLMOttN4iu2fXoc2BGhdnYhIOxA==}
+    engines: {node: '>= 18'}
+
+  '@redis/json@5.10.0':
+    resolution: {integrity: sha512-B2G8XlOmTPUuZtD44EMGbtoepQG34RCDXLZbjrtON1Djet0t5Ri7/YPXvL9aomXqP8lLTreaprtyLKF4tmXEEA==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@redis/client': ^5.10.0
+
+  '@redis/search@5.10.0':
+    resolution: {integrity: sha512-3SVcPswoSfp2HnmWbAGUzlbUPn7fOohVu2weUQ0S+EMiQi8jwjL+aN2p6V3TI65eNfVsJ8vyPvqWklm6H6esmg==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@redis/client': ^5.10.0
+
+  '@redis/time-series@5.10.0':
+    resolution: {integrity: sha512-cPkpddXH5kc/SdRhF0YG0qtjL+noqFT0AcHbQ6axhsPsO7iqPi1cjxgdkE9TNeKiBUUdCaU1DbqkR/LzbzPBhg==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@redis/client': ^5.10.0
+
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0':
     resolution: {integrity: sha512-b9MIk7yhdS1pMCZM8VeNfUlSKVRhsHZNMl5O9SfaX0l0t5wjdgu4IDzGB8bpnGBBOjGST3rRFVsaaEtI4W6f7g==}
     engines: {node: '>=14'}
@@ -1733,6 +1764,10 @@ packages:
   clone@2.1.2:
     resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
     engines: {node: '>=0.8'}
+
+  cluster-key-slot@1.1.2:
+    resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
+    engines: {node: '>=0.10.0'}
 
   code-excerpt@4.0.0:
     resolution: {integrity: sha512-xxodCmBen3iy2i0WtAK8FlFNrRzjUqjRsMfho58xT/wvZU1YTM3fCnRjcy1gJPMepaRlgm/0e6w8SpWHpn3/cA==}
@@ -2985,6 +3020,10 @@ packages:
   readdirp@4.1.2:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
+
+  redis@5.10.0:
+    resolution: {integrity: sha512-0/Y+7IEiTgVGPrLFKy8oAEArSyEJkU0zvgV5xyi9NzNQ+SLZmyFbUsWIbgPcd4UdUh00opXGKlXJwMmsis5Byw==}
+    engines: {node: '>= 18'}
 
   regenerate-unicode-properties@10.2.2:
     resolution: {integrity: sha512-m03P+zhBeQd1RGnYxrGyDAPpWX/epKirLrp8e3qevZdVkKtnCrjjWczIbYc8+xd6vcTStVlqfycTx1KR4LOr0g==}
@@ -4598,7 +4637,7 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
-  '@inkjs/ui@2.0.0(ink@4.4.1(@types/react@19.2.5)(react@19.2.0))':
+  '@inkjs/ui@2.0.0(ink@4.4.1(@types/react@19.2.5)(react@18.3.1))':
     dependencies:
       chalk: 5.6.2
       cli-spinners: 3.3.0
@@ -4770,7 +4809,7 @@ snapshots:
       '@babel/types': 7.28.5
       '@lingo.dev/_sdk': 0.12.8
       '@lingo.dev/_spec': 0.43.0
-      '@openrouter/ai-sdk-provider': 0.7.5(ai@4.3.19(react@19.2.0)(zod@3.25.76))(zod@3.25.76)
+      '@openrouter/ai-sdk-provider': 0.7.5(ai@4.3.19(react@18.3.1)(zod@3.25.76))(zod@3.25.76)
       '@prettier/sync': 0.6.1(prettier@3.6.2)
       ai: 4.3.19(react@18.3.1)(zod@3.25.76)
       dedent: 1.7.0
@@ -4795,11 +4834,17 @@ snapshots:
 
   '@lingo.dev/_locales@0.1.0': {}
 
-  '@lingo.dev/_react@0.6.0(next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))':
+  '@lingo.dev/_react@0.6.0(next@16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))':
     dependencies:
       js-cookie: 3.0.5
       lodash: 4.17.21
       next: 16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+
+  '@lingo.dev/_react@0.6.0(next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@18.3.1))(react@18.3.1))':
+    dependencies:
+      js-cookie: 3.0.5
+      lodash: 4.17.21
+      next: 16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@18.3.1))(react@18.3.1)
 
   '@lingo.dev/_sdk@0.12.8':
     dependencies:
@@ -5019,7 +5064,7 @@ snapshots:
       '@octokit/request-error': 6.1.8
       '@octokit/webhooks-methods': 5.1.1
 
-  '@openrouter/ai-sdk-provider@0.7.5(ai@4.3.19(react@19.2.0)(zod@3.25.76))(zod@3.25.76)':
+  '@openrouter/ai-sdk-provider@0.7.5(ai@4.3.19(react@18.3.1)(zod@3.25.76))(zod@3.25.76)':
     dependencies:
       '@ai-sdk/provider': 1.1.3
       '@ai-sdk/provider-utils': 2.2.8(zod@3.25.76)
@@ -5043,6 +5088,26 @@ snapshots:
     dependencies:
       make-synchronized: 0.8.0
       prettier: 3.6.2
+
+  '@redis/bloom@5.10.0(@redis/client@5.10.0)':
+    dependencies:
+      '@redis/client': 5.10.0
+
+  '@redis/client@5.10.0':
+    dependencies:
+      cluster-key-slot: 1.1.2
+
+  '@redis/json@5.10.0(@redis/client@5.10.0)':
+    dependencies:
+      '@redis/client': 5.10.0
+
+  '@redis/search@5.10.0(@redis/client@5.10.0)':
+    dependencies:
+      '@redis/client': 5.10.0
+
+  '@redis/time-series@5.10.0(@redis/client@5.10.0)':
+    dependencies:
+      '@redis/client': 5.10.0
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.28.5)':
     dependencies:
@@ -5441,6 +5506,8 @@ snapshots:
   client-only@0.0.1: {}
 
   clone@2.1.2: {}
+
+  cluster-key-slot@1.1.2: {}
 
   code-excerpt@4.0.0:
     dependencies:
@@ -5958,7 +6025,7 @@ snapshots:
       blacklist: 1.1.4
       prop-types: 15.8.1
 
-  ink-spinner@5.0.0(ink@4.4.1(@types/react@19.2.5)(react@19.2.0))(react@18.3.1):
+  ink-spinner@5.0.0(ink@4.4.1(@types/react@19.2.5)(react@18.3.1))(react@18.3.1):
     dependencies:
       cli-spinners: 2.9.2
       ink: 4.4.1(@types/react@19.2.5)(react@18.3.1)
@@ -6164,7 +6231,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lingo.dev@0.115.0(@types/node@24.10.1)(@types/react@19.2.5)(encoding@0.1.13)(next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)):
+  lingo.dev@0.115.0(@types/node@24.10.1)(@types/react@19.2.5)(encoding@0.1.13)(next@16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)):
     dependencies:
       '@ai-sdk/anthropic': 1.2.12(zod@3.25.76)
       '@ai-sdk/google': 1.2.22(zod@3.25.76)
@@ -6178,16 +6245,16 @@ snapshots:
       '@biomejs/wasm-nodejs': 2.3.5
       '@datocms/cma-client-node': 4.0.2
       '@gitbeaker/rest': 39.34.3
-      '@inkjs/ui': 2.0.0(ink@4.4.1(@types/react@19.2.5)(react@19.2.0))
+      '@inkjs/ui': 2.0.0(ink@4.4.1(@types/react@19.2.5)(react@18.3.1))
       '@inquirer/prompts': 7.10.1(@types/node@24.10.1)
       '@lingo.dev/_compiler': 0.7.17(react@18.3.1)
       '@lingo.dev/_locales': 0.1.0
-      '@lingo.dev/_react': 0.6.0(next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
+      '@lingo.dev/_react': 0.6.0(next@16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
       '@lingo.dev/_sdk': 0.12.8
       '@lingo.dev/_spec': 0.43.0
       '@markdoc/markdoc': 0.5.4(@types/react@19.2.5)(react@18.3.1)
       '@modelcontextprotocol/sdk': 1.22.0
-      '@openrouter/ai-sdk-provider': 0.7.5(ai@4.3.19(react@19.2.0)(zod@3.25.76))(zod@3.25.76)
+      '@openrouter/ai-sdk-provider': 0.7.5(ai@4.3.19(react@18.3.1)(zod@3.25.76))(zod@3.25.76)
       '@paralleldrive/cuid2': 2.3.1
       '@types/ejs': 3.1.5
       ai: 4.3.19(react@18.3.1)(zod@3.25.76)
@@ -6215,7 +6282,119 @@ snapshots:
       ini: 5.0.0
       ink: 4.4.1(@types/react@19.2.5)(react@18.3.1)
       ink-progress-bar: 3.0.0
-      ink-spinner: 5.0.0(ink@4.4.1(@types/react@19.2.5)(react@19.2.0))(react@18.3.1)
+      ink-spinner: 5.0.0(ink@4.4.1(@types/react@19.2.5)(react@18.3.1))(react@18.3.1)
+      inquirer: 12.11.1(@types/node@24.10.1)
+      interactive-commander: 0.5.194(@types/node@24.10.1)
+      is-url: 1.2.4
+      jsdom: 25.0.1
+      json5: 2.2.3
+      jsonc-parser: 3.3.1
+      jsonrepair: 3.13.1
+      listr2: 8.3.3
+      lodash: 4.17.21
+      marked: 15.0.12
+      mdast-util-from-markdown: 2.0.2
+      mdast-util-gfm: 3.1.0
+      micromark-extension-gfm: 3.0.0
+      node-machine-id: 1.1.12
+      node-webvtt: 1.9.4
+      object-hash: 3.0.0
+      octokit: 4.1.4
+      ollama-ai-provider: 1.2.0(zod@3.25.76)
+      open: 10.2.0
+      ora: 8.2.0
+      p-limit: 6.2.0
+      php-array-reader: 2.1.2
+      plist: 3.1.0
+      posthog-node: 5.11.2
+      prettier: 3.6.2
+      react: 18.3.1
+      rehype-stringify: 10.0.1
+      remark-disable-tokenizers: 1.1.1
+      remark-frontmatter: 5.0.0
+      remark-gfm: 4.0.1
+      remark-mdx: 3.1.1
+      remark-mdx-frontmatter: 5.2.0
+      remark-parse: 11.0.0
+      remark-rehype: 11.1.2
+      remark-stringify: 11.0.0
+      sax: 1.4.3
+      srt-parser-2: 1.2.3
+      unified: 11.0.5
+      unist-util-visit: 5.0.0
+      vfile: 6.0.3
+      xliff: 6.2.2
+      xml2js: 0.6.2
+      xpath: 0.0.34
+      yaml: 2.8.1
+      zod: 3.25.76
+    transitivePeerDependencies:
+      - '@biomejs/wasm-bundler'
+      - '@biomejs/wasm-web'
+      - '@cfworker/json-schema'
+      - '@types/node'
+      - '@types/react'
+      - babel-plugin-macros
+      - bufferutil
+      - canvas
+      - encoding
+      - next
+      - react-devtools-core
+      - supports-color
+      - utf-8-validate
+
+  lingo.dev@0.115.0(@types/node@24.10.1)(@types/react@19.2.5)(encoding@0.1.13)(next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@18.3.1))(react@18.3.1)):
+    dependencies:
+      '@ai-sdk/anthropic': 1.2.12(zod@3.25.76)
+      '@ai-sdk/google': 1.2.22(zod@3.25.76)
+      '@ai-sdk/mistral': 1.2.8(zod@3.25.76)
+      '@ai-sdk/openai': 1.3.24(zod@3.25.76)
+      '@babel/generator': 7.28.5
+      '@babel/parser': 7.28.5
+      '@babel/traverse': 7.28.5
+      '@babel/types': 7.28.5
+      '@biomejs/js-api': 3.0.0(@biomejs/wasm-nodejs@2.3.5)
+      '@biomejs/wasm-nodejs': 2.3.5
+      '@datocms/cma-client-node': 4.0.2
+      '@gitbeaker/rest': 39.34.3
+      '@inkjs/ui': 2.0.0(ink@4.4.1(@types/react@19.2.5)(react@18.3.1))
+      '@inquirer/prompts': 7.10.1(@types/node@24.10.1)
+      '@lingo.dev/_compiler': 0.7.17(react@18.3.1)
+      '@lingo.dev/_locales': 0.1.0
+      '@lingo.dev/_react': 0.6.0(next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@18.3.1))(react@18.3.1))
+      '@lingo.dev/_sdk': 0.12.8
+      '@lingo.dev/_spec': 0.43.0
+      '@markdoc/markdoc': 0.5.4(@types/react@19.2.5)(react@18.3.1)
+      '@modelcontextprotocol/sdk': 1.22.0
+      '@openrouter/ai-sdk-provider': 0.7.5(ai@4.3.19(react@18.3.1)(zod@3.25.76))(zod@3.25.76)
+      '@paralleldrive/cuid2': 2.3.1
+      '@types/ejs': 3.1.5
+      ai: 4.3.19(react@18.3.1)(zod@3.25.76)
+      bitbucket: 2.12.0(encoding@0.1.13)
+      chalk: 5.6.2
+      chokidar: 4.0.3
+      cli-progress: 3.12.0
+      cli-table3: 0.6.5
+      cors: 2.8.5
+      csv-parse: 5.6.0
+      csv-stringify: 6.6.0
+      date-fns: 4.1.0
+      dedent: 1.7.0
+      diff: 7.0.0
+      dotenv: 16.6.1
+      ejs: 3.1.10
+      express: 5.1.0
+      external-editor: 3.1.0
+      figlet: 1.9.4
+      flat: 6.0.1
+      gettext-parser: 8.0.0
+      glob: 10.4.5
+      gradient-string: 3.0.0
+      gray-matter: 4.0.3
+      ini: 5.0.0
+      ink: 4.4.1(@types/react@19.2.5)(react@18.3.1)
+      ink-progress-bar: 3.0.0
+      ink-spinner: 5.0.0(ink@4.4.1(@types/react@19.2.5)(react@18.3.1))(react@18.3.1)
       inquirer: 12.11.1(@types/node@24.10.1)
       interactive-commander: 0.5.194(@types/node@24.10.1)
       is-url: 1.2.4
@@ -6837,6 +7016,30 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
+  next@16.0.3(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@18.3.1))(react@18.3.1):
+    dependencies:
+      '@next/env': 16.0.3
+      '@swc/helpers': 0.5.15
+      caniuse-lite: 1.0.30001754
+      postcss: 8.4.31
+      react: 18.3.1
+      react-dom: 19.2.0(react@18.3.1)
+      styled-jsx: 5.1.6(react@18.3.1)
+    optionalDependencies:
+      '@next/swc-darwin-arm64': 16.0.3
+      '@next/swc-darwin-x64': 16.0.3
+      '@next/swc-linux-arm64-gnu': 16.0.3
+      '@next/swc-linux-arm64-musl': 16.0.3
+      '@next/swc-linux-x64-gnu': 16.0.3
+      '@next/swc-linux-x64-musl': 16.0.3
+      '@next/swc-win32-arm64-msvc': 16.0.3
+      '@next/swc-win32-x64-msvc': 16.0.3
+      '@opentelemetry/api': 1.9.0
+      sharp: 0.34.5
+    transitivePeerDependencies:
+      - '@babel/core'
+      - babel-plugin-macros
+
   no-case@3.0.4:
     dependencies:
       lower-case: 2.0.2
@@ -7046,6 +7249,11 @@ snapshots:
       iconv-lite: 0.7.0
       unpipe: 1.0.0
 
+  react-dom@19.2.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      scheduler: 0.27.0
+
   react-dom@19.2.0(react@19.2.0):
     dependencies:
       react: 19.2.0
@@ -7074,6 +7282,14 @@ snapshots:
       string_decoder: 1.3.0
 
   readdirp@4.1.2: {}
+
+  redis@5.10.0:
+    dependencies:
+      '@redis/bloom': 5.10.0(@redis/client@5.10.0)
+      '@redis/client': 5.10.0
+      '@redis/json': 5.10.0(@redis/client@5.10.0)
+      '@redis/search': 5.10.0(@redis/client@5.10.0)
+      '@redis/time-series': 5.10.0(@redis/client@5.10.0)
 
   regenerate-unicode-properties@10.2.2:
     dependencies:
@@ -7417,6 +7633,11 @@ snapshots:
       react: 19.2.0
     optionalDependencies:
       '@babel/core': 7.28.5
+
+  styled-jsx@5.1.6(react@18.3.1):
+    dependencies:
+      client-only: 0.0.1
+      react: 18.3.1
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
