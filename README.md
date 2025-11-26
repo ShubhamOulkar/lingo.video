@@ -119,4 +119,4 @@ Real-time translation systems face several technical and operational challenges.
 Content submitted by [shubham oulkar](https://github.com/ShubhamOulkar) is Creative Commons Attribution 4.0 International licensed, as found in the [LICENSE](/LICENSE) file.
 
 ## 🌐 Readme in other languages
-[हिंदी](./docs/hi.md) • [日本語](./docs/ja.md) • [Français](./docs/fr.md) • [Deutsch](./docs/de.md) • [Español](./docs/es.md)
+[हिंदी](./docs/readmes/hi.md) • [日本語](./docs/readmes/ja.md) • [Français](./docs/readmes/fr.md) • [Deutsch](./docs/readmes/de.md) • [Español](./docs/readmes/es.md)
