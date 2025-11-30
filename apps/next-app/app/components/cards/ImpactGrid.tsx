@@ -15,11 +15,13 @@ export default function ImpactGrid() {
         <div className={styles.card}>
           <div>
             <VTTIcon />
-            <h3 className={styles.title}>Eliminates VTT file maintenance</h3>
+            <h3 className={styles.title}>
+              Eliminates maintenance of transcripts and audio files
+            </h3>
           </div>
           <p className={styles.description}>
-            No need to manually create or store .vtt subtitle files for each
-            language.
+            No need to manually create or store .vtt subtitle files and audio
+            tracks for each language.
           </p>
         </div>
 

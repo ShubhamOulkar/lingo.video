@@ -22,7 +22,13 @@ export default function VideoPlayer() {
   return (
     <div className={style.video_player}>
       <div className={style.video_container}>
-        <video controls preload="metadata" ref={videoRef} poster="og.png">
+        <video
+          controls
+          preload="metadata"
+          ref={videoRef}
+          poster="og.png"
+          muted={true}
+        >
           <source src="emotions.mp4" type="video/mp4" />
           <track
             src="/subtitles/emotions.en.vtt"
@@ -31,47 +37,10 @@ export default function VideoPlayer() {
             label="English"
             default={locale === "en"}
           />
-          {/* Following files are not required, AI is doing translation in real time. */}
-          {/* I am keeping these files for checking accuracy of transaltions. Test is by running CC. */}
-          <track
-            src="/subtitles/emotions.hi.vtt"
-            kind="captions"
-            srcLang="hi"
-            label="Hindi"
-            default={locale === "hi"}
-          />
-          <track
-            src="/subtitles/emotions.es.vtt"
-            kind="captions"
-            srcLang="es"
-            label="Spanish"
-            default={locale === "es"}
-          />
-          <track
-            src="/subtitles/emotions.de.vtt"
-            kind="captions"
-            srcLang="de"
-            label="German"
-            default={locale === "de"}
-          />
-          <track
-            src="/subtitles/emotions.fr.vtt"
-            kind="captions"
-            srcLang="fr"
-            label="French"
-            default={locale === "fr"}
-          />
-          <track
-            src="/subtitles/emotions.ja.vtt"
-            kind="captions"
-            srcLang="ja"
-            label="Japanese"
-            default={locale === "Japanese"}
-          />
         </video>
         <p className={style.video_note}>
-          *Note: Press play to start the cue changes and trigger translation. CC
-          is available for checking accuracy.
+          *Note: Press play to start the cue changes and trigger translations
+          with audio. Original audio is muted by default.
         </p>
       </div>
       <Transcript videoRef={videoRef} locale={locale} />
