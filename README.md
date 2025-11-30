@@ -50,7 +50,7 @@ pnpm dev
 ## Impact & Benefits for Global Companies
 This system offers tangible benefits for organizations, especially global food and delivery companies:
 
-- `Eliminates VTT file maintenance`: No need to manually create or store .vtt subtitle files for each language.
+- `Eliminates VTT and audio file maintenance`: No need to manually create or store .vtt subtitle files for each language.
 
 - `Reduces database and storage costs`: Subtitles are generated and translated on the fly, so companies don’t pay for storing multiple language files.
 

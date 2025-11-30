@@ -1,73 +1,107 @@
-# Architecture
+This project uses a production-grade architecture designed for **real-time translation** of both text and audio. It combines a dedicated WebSocket server (for persistent low-latency connections), a translation/agent layer, and a Vercel-hosted Next.js frontend. The monorepo is managed with Turborepo/Turbopack.
 
-This document describes a production-grade architecture for building a real-time translation system using a dedicated WebSocket server and a Vercel-hosted app, organized using a monorepo with Turbopack.
+---
 
-### Overview 
-Vercel Edge Functions cannot run Node-only SDKs (like lingo.dev/sdk) because they rely on Node APIs (fs, crypto, stream). WebSockets require a persistent server, which Edge Functions do not provide reliably for long-lived connections.
+## **Overview**
 
-To address this, responsibilities are split across two services:
+* **WebSocket Server (Render)** — persistent Node.js server for streaming and orchestration.
+* **Frontend (Vercel)** — Next.js UI for playback, language selection, and audio/subtitle rendering.
+* **Translation & TTS Layer (Agent-driven)** — handles translation, audio generation, caching, and synchronization.
 
-1. WebSocket Server (Render)
-
-- Persistent Node.js server managing WebSocket connections.
-
-- Relays messages from clients to the translation service.
-
-- Ensures low-latency, real-time updates.
-
-2. App Frontend (Vercel)
-
-- Next.js app serving UI.
-
-- Calls the WebSocket server for real-time translation.
-
-### High-Level Architecture
-This design follows Vercel’s recommended pattern for combining WebSockets with non-Edge-compatible logic.
+## **High-Level Architecture Diagram**
 
 ```mermaid
 flowchart TD
   Client[Client Browser]
-  
-  subgraph VercelApp["Vercel App (Next.js / Frontend)"]
-    FE[Frontend / SSR Pages]
+
+  subgraph VercelApp["Vercel App (Next.js / UI)"]
+    FE[SSR / UI Pages]
   end
-  
-  subgraph WS_Server["Render / Node.js WebSocket Server"]
+
+  subgraph WS_Server["Render WebSocket Server (Node.js)"]
     WS[WebSocket Server]
-    subgraph NodeTranslate["Node Translation Service"]
-      Translate[Translation Route / API]
-      LingoSDK[Lingo SDK / Engine]
+    subgraph AgentLayer["Agent / Translation Layer"]
+      Translate[Translation Controller]
+      LingoSDK[Lingo SDK Engine]
+      Cache[Redis Cache]
+      TTSAgent[TTS Controller / Gemini TTS]
     end
   end
-  
-  Client -- "ws.connect()" --> WS
-  Client -- "ws.send(text payload)" --> WS
-  WS -- "POST JSON {text, locales}" --> Translate
-  Translate -- "calls Lingo SDK" --> LingoSDK
+
+  Client -- "WebSocket: connect()" --> WS
+  Client -- "send text segments" --> WS
+  WS -- "POST {text, locales}" --> Translate
+  Translate -- "check cache" --> Cache
+  Cache -- "miss / hit" --> Translate
+  Translate -- "call Lingo SDK" --> LingoSDK
   LingoSDK -- "translated text" --> Translate
-  Translate -- "JSON {translated}" --> WS
-  WS -- "ws.send({translated})" --> Client
-  Client -- "HTTP fetch / SSR pages" --> FE
+  Translate -- "send text -> TTS" --> TTSAgent
+  TTSAgent -- "generate audio chunks" --> WS
+  WS -- "stream audio & subtitles" --> Client
+  Client -- "HTTP fetch (SSR)" --> FE
+```
 
-```
-### Technical details
-1. Monorepo (Turbopack):
-```
-/lingo.video
-├─ /apps
-│  ├─ /next-app     # Next.js app deployed on Vercel
-│  └─ /ws-server    # Node.js WebSocket server deployed on Render
-└─ /packages
-   └─ /types        # Shared types
-```
-2. WebSocket Server uses ws library for real-time communication.
-3. Translation Layer uses `lingo.dev/sdk` (Lingo engine) for actual translations.s
-4. Tech stack
+### **1. TTS Controller / Agent**
 
-| Layer              | Technology       |
-| ------------------ | ---------------- |
-| Frontend           | Next.js (Vercel) |
-| WebSocket Server   | Node.js (Render) |
-| Translation Engine | `lingo.dev/sdk`, `lingo compiler`  |
-| Monorepo           | Turbopack        |
-| Language           | TypeScript/Javascript       |
+* A specialized agent (TTS Agent) receives translated text from the translation controller.
+* It is responsible for:
+
+  * Selecting voice/profile (language, gender, tone).
+  * Chunking translated text into smaller segments suitable for streaming.
+  * Calling the TTS model (Gemini TTS or configured TTS provider).
+  * Encoding audio into streamable chunks (e.g., PCM/Opus/MP3 segments).
+  * Returning audio buffers back to the WebSocket server for delivery.
+
+### **2. Streaming & Low-Latency Playback**
+
+* Audio is generated and streamed back as small binary frames over WebSocket.
+* The frontend uses the Web Audio API to append incoming audio buffers to a playback buffer, ensuring smooth, low-latency audio output synchronized with subtitles.
+* Chunk-level timestamps are used to align audio with subtitle updates and video playback.
+
+### **3. Caching & Cost Optimization**
+
+* The system caches:
+
+  * Translated text fingerprints (hashes) in **Redis** to avoid redundant translations.
+  * Generated audio segments (optionally) for frequently repeated lines to save TTS cost.
+* The agent decides when to reuse cached audio vs. regenerate (based on TTL, voice settings, or quality flags).
+
+### **4. Fallbacks & Resilience**
+
+* If the primary TTS provider or network fails, the agent can:
+
+  * Fall back to a secondary TTS service or a lower-latency pre-synthesized voice.
+  * Degrade gracefully to subtitles-only mode while queuing TTS generation.
+* Retries and exponential backoff are handled in the TTS agent to ensure availability.
+
+### **5. Voice & Persona Options**
+
+* The TTS agent supports selecting different voices or preserving speaker identity (voice-cloning planned as an enhancement).
+* Voice parameters are passed from the frontend or system settings (e.g., "neutral", "energetic").
+
+---
+
+## **Technical Details — TTS Specifics**
+
+* **TTS Engine**: Gemini TTS (primary) with an abstracted adapter to allow alternative providers.
+* **Audio format**: Streamed as small PCM encoded chunks.
+* **Buffering strategy**: Client-side audio buffer with timestamp alignment to video playback.
+* **Latency targets**: Sub-second initial playback for short subtitle segments.
+* **Caching**: Redis-based caching for translated text and optional audio caching for repeated phrases.
+
+---
+
+## **Updated Tech Stack**
+
+| Layer               | Technology                      |
+| ------------------- | ------------------------------- |
+| Frontend            | Next.js (Vercel)                |
+| WebSocket Server    | Node.js (Render)                |
+| Translation Engine  | `lingo.dev/sdk`, Lingo Compiler |
+| Agent Orchestration | Custom agent layer (Node)       |
+| TTS Engine          | Gemini TTS (primary)            |
+| Cache / Storage     | Redis                           |
+| Monorepo            | Turborepo / Turbopack           |
+| Language            | TypeScript / JavaScript         |
+
+---
