@@ -1,28 +1,18 @@
 
-# 🎬 Real-Time Video Subtitles Translation
-
-System that translates video subtitles in real-time using [`lingo.dev`](https://lingo.dev/) SDK. Designed with a monorepo architecture: frontend on Vercel, WebSocket translation server on Render.
+# 🎬 Real-Time Audio + Subtitle Translation Engine for Global Content
 
 ## Problem Statement
 
-A global food company wants to reach international markets. Their website and video content including UI text, SEO content, and food related videos must support multiple languages.
+Global companies rely heavily on video content for marketing, product education, training, and international outreach. However, most video assets are created in a single language typically in English. Translating these videos manually into multiple languages requires: human translators, voiceover artists, subtitle file creation and formatting, repeated engineering work for UI and SEO localization.
 
-Currently, all video content is in English, and manually translating subtitles for every video is time consuming and expensive. The company seeks an AI driven solution that can:
-
-- Automatically translate website UI into multiple languages
-
-- Generate and translate video subtitles in real time
-
-- Ensure SEO friendly multilingual content
-
-The goal is to save time, reduce costs, and deliver a seamless multilingual experience without expanding the translation team.
+The challenge becomes far more complex when translation needs to be real-time, such as: live product demos, training sessions, user education websites, continuous content creation. Traditional translation workflows cannot meet real-time requirements.
+This project solves that problem by creating a Real-Time Multilingual Video & Audio Translation System that automatically translates: Speech → Text → Translated Text → Translated Audio → Subtitles in real time
 
 ![lingo.video screenshot in hindi](desktop.png)
 
 ## Table of Contents
-- [Installing](#getting-started)
 - [lingo.video website](https://lingo-video.vercel.app/)
-- [YouTube video](https://www.youtube.com/watch?v=2jzpnqwv9ls)
+- [YouTube video](https://youtu.be/AUdZw9KzZzw)
 - [Real-Time Video Subtitles Translation architecture and tech stack](./docs/live-translation-architecture.md)
 - [Impact & Benefits for Global Companies](#impact--benefits-for-global-companies)
 - [Features](#features)
@@ -31,22 +21,7 @@ The goal is to save time, reduce costs, and deliver a seamless multilingual expe
 - [Author](#author)
 - [License](#license)
 
-## Getting Started
-1. Clone repository
-```
-git clone https://github.com/ShubhamOulkar/lingo.video.git
-cd lingo.video
-```
-2. Install dependencies
-```
-pnpm install
-```
-3. Get lingo.dev api key from [`lingo.dev`](https://lingo.dev/)
-4. Create `.env` file and store `LINGODOTDEV_API_KEY`
-5. Run frontend and websocket server concurrently
-```
-pnpm dev
-```
+
 ## Impact & Benefits for Global Companies
 This system offers tangible benefits for organizations, especially global food and delivery companies:
 
@@ -65,7 +40,7 @@ This system offers tangible benefits for organizations, especially global food a
 ## Features
 
 - **Real-Time Subtitle Translation**  
-  - Translates video subtitles on the fly using [`lingo.dev`](https://lingo.dev/en/sdk) SDK and a WebSocket server.  
+  - Translates video subtitles on the fly using translator engine and a WebSocket server.  
   - No need to maintain `.vtt` files for multiple languages.
   > Note: This repository includes [.vtt files](./apps/next-app/public/subtitles/emotions.hi.vtt) for manual accuracy testing. You can test it by clicking on `CC` and comparing with live translation.
 
@@ -74,7 +49,7 @@ This system offers tangible benefits for organizations, especially global food a
   - Dynamic language compilation without hardcoding translations.  
 
 - **SEO-Friendly Multilingual Content**  
-  - Automatically generates meta tags and Open Graph (OG) tags using [`Lingo CLI`](https://lingo.dev/en/cli).  
+  - Automatically generates meta tags and Open Graph (OG) tags.
   - Fully automatable via CI/CD pipelines.
   > note: Verify og cards for hindi [here](https://opengraph.dev/panel?url=https%3A%2F%2Flingo-video.vercel.app%2Fhi) 
 
