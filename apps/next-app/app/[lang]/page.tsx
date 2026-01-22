@@ -57,6 +57,7 @@ export default async function Home({ params }: Props) {
       <main className={styles.main}>
         <h1>Real time video subtitle translations</h1>
         <VideoPlayer />
+        <p>Please wait while the WebSocket connection is being established.</p>
         <ImpactGrid />
       </main>
       <Footer />
