@@ -29,18 +29,9 @@ export default function Footer() {
               X
             </a>
           </li>
-          <li>
-            <a
-              href="https://github.com/ShubhamOulkar/lingo.video"
-              target="_blank"
-              rel="noopener"
-            >
-              GitHub – lingo.video
-            </a>
-          </li>
         </ul>
         <p className={styles.copy}>
-          © 2025 Shubham Oulkar. All rights reserved.
+          © 2026 Shubham Oulkar. All rights reserved.
         </p>
       </div>
     </footer>
